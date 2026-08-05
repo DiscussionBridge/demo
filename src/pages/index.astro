@@ -1,0 +1,213 @@
+---
+const demos = [
+  {
+    title: "Plain Astro",
+    description: "A core Astro publishing example with article content, content tags, and a Discourse companion topic.",
+    href: "https://astro.demo.discussionbridge.dev/",
+    discussionHref: "https://forum.discussionbridge.dev/t/core-astro-discussion-bridge-demo/34",
+    status: "Alpha",
+  },
+  {
+    title: "Astro + Starlight",
+    description: "A Starlight documentation demo with docs, blog, news, releases, content lanes, and comment display modes.",
+    href: "https://astrostarlight.demo.discussionbridge.dev/",
+    discussionHref: "https://forum.discussionbridge.dev/c/discussionbridge-for-astro/5",
+    status: "Alpha",
+  },
+  {
+    title: "Stock Starlight Control",
+    description: "A clean Starlight baseline for upgrade checks, warning checks, and comparison against the bridge demo.",
+    href: "https://stockstarlight.demo.discussionbridge.dev/",
+    discussionHref: "https://forum.discussionbridge.dev/c/discussionbridge-for-astro/5",
+    status: "Control",
+  },
+  {
+    title: "Future Integrations",
+    description: "The demo lane can grow to Statamic, ecommerce platforms, templates, plugins, and vertical examples.",
+    href: "https://discussionbridge.dev/",
+    discussionHref: "https://forum.discussionbridge.dev/",
+    status: "Planned",
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DiscussionBridge Demos</title>
+    <meta name="description" content="Demo chooser for DiscussionBridge integrations." />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f8fb;
+        --panel: #ffffff;
+        --text: #17202a;
+        --muted: #607086;
+        --line: #d9e1ea;
+        --accent: #116a7b;
+        --accent-soft: #e8f5f7;
+        --ink: #24313d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.5;
+      }
+
+      header {
+        background: var(--ink);
+        color: #fff;
+        padding: 34px 28px;
+      }
+
+      header div,
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 42px;
+        letter-spacing: 0;
+      }
+
+      header p {
+        max-width: 760px;
+        margin: 0;
+        color: #d9e1ea;
+        font-size: 17px;
+      }
+
+      .product-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-block-end: 20px;
+      }
+
+      .product-nav a {
+        color: #fff;
+        font-weight: 700;
+        text-underline-offset: 0.2em;
+      }
+
+      main {
+        padding: 28px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        min-height: 230px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .eyebrow {
+        width: fit-content;
+        padding: 4px 8px;
+        border-radius: 5px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .card h2 {
+        margin: 0;
+        font-size: 22px;
+        letter-spacing: 0;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: auto;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        background: var(--accent-soft);
+        color: var(--accent);
+      }
+
+      .note {
+        margin-top: 18px;
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <nav class="product-nav" aria-label="Product navigation">
+          <a href="https://discussionbridge.dev/">DiscussionBridge.dev</a>
+        </nav>
+        <h1>DiscussionBridge Demos</h1>
+        <p>Choose a live integration demo and see how static publishing stays connected to Discourse discussion.</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid">
+        {demos.map((demo) => (
+          <section class="card">
+            <span class="eyebrow">{demo.status}</span>
+            <h2>{demo.title}</h2>
+            <p>{demo.description}</p>
+            <div class="actions">
+              <a class="button" href={demo.href}>Open Demo</a>
+              <a class="button secondary" href={demo.discussionHref}>Discussion</a>
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <p class="note">
+        Canonical demo source belongs with the integration package that proves it. This chooser belongs with the product site.
+      </p>
+    </main>
+  </body>
+</html>
