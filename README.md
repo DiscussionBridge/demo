@@ -23,7 +23,7 @@ Starlight demonstration sites. It does not own those demo implementations.
 
 - GitHub: `DiscussionBridge/demo`
 - Local root:
-  `C:\CodeProjects\CodeWorksLabs\DiscussionBridge\sites\demo-discussionbridge-dev`
+  `C:\CodeProjects\Sites\DiscussionBridge\discussionbridge.dev\demo.discussionbridge.dev\site`
 - Cloudflare Worker: `demo-discussionbridge-dev`
 - Deployment authority: `wrangler.jsonc`
 
