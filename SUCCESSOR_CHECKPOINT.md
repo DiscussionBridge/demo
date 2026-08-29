@@ -42,6 +42,26 @@ reviewed deployment gate.
   `public/og.png` has SHA-256
   `4e76577031634b3e1ec19083721c87eee3c303819bc8461c05087a352b59405f`.
 
+## Public build-map refinement
+
+Phil authorized publishing the chooser as a truthful view of what is actually
+being built. Before deployment, the status model was refined so that it no
+longer places every unfinished destination into one generic `Planned` bucket:
+
+- `Live refresh` identifies an existing demonstration that is being rebound to
+  the current shared product contract;
+- `Building for Alpha` identifies the six-profile Alpha target;
+- `Control` identifies an intentionally unmodified comparison installation;
+- `Future edition` identifies themed work that follows the stock workflows.
+
+The apex now states the Alpha product boundary explicitly: one native Discourse
+plugin connected to six real publishing profiles—Astro, WordPress, Ghost,
+Statamic Flat, Statamic DB, and publishing Discourse. Planned and future origins
+remain non-clickable until their installations are actually ready.
+
+This public build map does not expand the Alpha target to the future platform
+and service candidates recorded in the product checkpoint.
+
 The implementation is committed as
 `1d323e735724e07de978e50fb4053199266e51b9` (`Build DiscussionBridge demo
 estate navigation`), tree

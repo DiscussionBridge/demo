@@ -2,7 +2,7 @@
 import type { Demo } from "../data/demo-estate";
 
 const { demo } = Astro.props as { demo: Demo };
-const stateClass = demo.state.toLowerCase();
+const stateClass = demo.state.toLowerCase().replaceAll(" ", "-");
 ---
 
 <article class="demo-card">
@@ -31,7 +31,9 @@ const stateClass = demo.state.toLowerCase();
   .state { padding: 5px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
   .state.flagship { background: var(--gold-soft); color: var(--gold-strong); }
   .state.control { background: var(--slate-soft); color: var(--slate-strong); }
-  .state.planned { background: #f1f3f5; color: #5d6873; }
+  .state.building-for-alpha { background: #e8f0ff; color: #24568d; }
+  .state.live-refresh { background: #e8f6e8; color: #286534; }
+  .state.future-edition { background: #f1f3f5; color: #5d6873; }
   code { overflow-wrap: anywhere; color: var(--muted); font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace; font-size: 0.72rem; text-align: right; }
   h2, p { margin: 0; }
   h2 { font-family: var(--display-font); font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.12; }

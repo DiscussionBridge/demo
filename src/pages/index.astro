@@ -24,6 +24,29 @@ import DemoLayout from "../layouts/DemoLayout.astro";
     </div>
   </section>
 
+  <section class="alpha-map" aria-labelledby="alpha-map-title">
+    <div>
+      <p class="kicker">Building for Alpha</p>
+      <h2 id="alpha-map-title">One native Discourse plugin. Six real publishing profiles.</h2>
+      <p>DiscussionBridge Alpha is being built across Astro, WordPress, Ghost, Statamic Flat, Statamic DB, and publishing Discourse. Each profile will have real content, its own connection, a durable mapped discussion, retry behavior, and native presentation.</p>
+    </div>
+    <ol aria-label="DiscussionBridge Alpha publishing profiles">
+      <li><strong>01</strong> Astro</li>
+      <li><strong>02</strong> WordPress</li>
+      <li><strong>03</strong> Ghost</li>
+      <li><strong>04</strong> Statamic Flat</li>
+      <li><strong>05</strong> Statamic DB</li>
+      <li><strong>06</strong> Publishing Discourse</li>
+    </ol>
+  </section>
+
+  <div class="status-key" aria-label="Demo status key">
+    <span><i class="live"></i> Live · refresh underway</span>
+    <span><i class="building"></i> Building for Alpha</span>
+    <span><i class="control"></i> Comparison control</span>
+    <span><i class="future"></i> Future edition</span>
+  </div>
+
   <h2 class="section-heading">Explore every platform</h2>
   <div class="collection-grid">
     {collections.map((collection) => (
@@ -50,6 +73,21 @@ import DemoLayout from "../layouts/DemoLayout.astro";
   .flagship-actions { display: flex; min-width: 205px; align-items: flex-start; flex-direction: column; gap: 14px; }
   .flagship-actions a { color: #d9eeee; font-weight: 800; text-underline-offset: 0.25em; }
   .flagship-actions .primary-action { padding: 11px 16px; border-radius: 10px; background: #fff; color: #102d32; text-decoration: none; }
+  .alpha-map { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr); gap: clamp(28px, 6vw, 72px); margin-top: 24px; padding: clamp(26px, 5vw, 54px); border: 1px solid var(--line); border-radius: 28px; background: rgb(255 255 255 / 82%); }
+  .alpha-map h2, .alpha-map p { margin: 0; }
+  .alpha-map h2 { max-width: 720px; font-family: var(--display-font); font-size: clamp(2rem, 4.5vw, 3.7rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1.03; }
+  .alpha-map div > p:last-child { max-width: 720px; margin-top: 18px; color: var(--muted); }
+  .alpha-map ol { display: grid; align-content: start; gap: 0; margin: 0; padding: 0; list-style: none; }
+  .alpha-map li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); font-weight: 800; }
+  .alpha-map li:last-child { border-bottom: 0; }
+  .alpha-map li strong { color: var(--accent-strong); font-size: 0.75rem; letter-spacing: 0.08em; }
+  .status-key { display: flex; flex-wrap: wrap; gap: 12px 22px; margin: 20px 0 0; padding: 0 4px; color: var(--muted); font-size: 0.8rem; font-weight: 750; }
+  .status-key span { display: inline-flex; align-items: center; gap: 7px; }
+  .status-key i { width: 9px; height: 9px; border-radius: 50%; background: #d7dde2; }
+  .status-key .live { background: #62a76c; }
+  .status-key .building { background: #4d82bb; }
+  .status-key .control { background: #7f91a1; }
+  .status-key .future { background: #b7bdc3; }
   .collection-card { display: grid; min-height: 240px; align-content: start; gap: 12px; padding: clamp(22px, 4vw, 34px); border: 1px solid var(--line); border-radius: 22px; background: rgb(255 255 255 / 78%); text-decoration: none; transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease; }
   .collection-card:hover { border-color: #9dc8c2; box-shadow: 0 18px 45px rgb(32 49 64 / 9%); transform: translateY(-2px); }
   .collection-card span { color: var(--accent-strong); font-size: 0.72rem; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -57,5 +95,5 @@ import DemoLayout from "../layouts/DemoLayout.astro";
   .collection-card h3 { font-family: var(--display-font); font-size: clamp(1.65rem, 3vw, 2.35rem); font-weight: 500; }
   .collection-card p { color: var(--muted); }
   .collection-card small { align-self: end; padding-top: 16px; color: var(--ink-soft); font-weight: 800; }
-  @media (max-width: 760px) { .flagship-panel { grid-template-columns: 1fr; align-items: start; } }
+  @media (max-width: 760px) { .flagship-panel, .alpha-map { grid-template-columns: 1fr; align-items: start; } }
 </style>

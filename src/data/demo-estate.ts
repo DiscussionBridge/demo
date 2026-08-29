@@ -1,4 +1,9 @@
-export type DemoState = "Flagship" | "Existing" | "Control" | "Planned";
+export type DemoState =
+  | "Flagship"
+  | "Live refresh"
+  | "Control"
+  | "Building for Alpha"
+  | "Future edition";
 
 export type Demo = {
   title: string;
@@ -28,7 +33,7 @@ export const astroDemos: Demo[] = [
     description:
       "A core Astro reference implementation that keeps framework behavior visible and the Bridge integration easy to inspect.",
     origin: "astro.demo.discussionbridge.dev",
-    state: "Existing",
+    state: "Live refresh",
     href: "https://astro.demo.discussionbridge.dev/",
     discussionHref: "https://forum.discussionbridge.dev/t/core-astro-discussion-bridge-demo/34",
     note: "Live today; it will be rebound to the shared six-profile contract.",
@@ -50,7 +55,7 @@ export const wordpressDemos: Demo[] = [
     description:
       "A stock WordPress installation with the native DiscussionBridge adapter, real published content, and its mapped discussion.",
     origin: "wordpress.demo.discussionbridge.dev",
-    state: "Planned",
+    state: "Building for Alpha",
     note: "Stock/core presentation is the initial WordPress demo boundary.",
   },
 ];
@@ -61,14 +66,14 @@ export const ghostDemos: Demo[] = [
     description:
       "A stock Ghost publication with a signed publishing workflow and server-side discussion presentation.",
     origin: "ghost.demo.discussionbridge.dev",
-    state: "Planned",
+    state: "Building for Alpha",
   },
   {
     title: "Ghost Themed Edition",
     description:
       "A future first-party DiscussionBridge theme that shows what a polished Ghost publishing experience can become.",
     origin: "ghost-themed.demo.discussionbridge.dev",
-    state: "Planned",
+    state: "Future edition",
     note: "Begins after the stock workflow is established.",
   },
 ];
@@ -79,21 +84,21 @@ export const statamicDemos: Demo[] = [
     description:
       "A stock Statamic installation with file-backed content, its own Bridge connection, and a complete discussion workflow.",
     origin: "statamic-flat.demo.discussionbridge.dev",
-    state: "Planned",
+    state: "Building for Alpha",
   },
   {
     title: "Statamic DB",
     description:
       "A stock Statamic installation with database-backed content and independently proven Bridge behavior.",
     origin: "statamic-db.demo.discussionbridge.dev",
-    state: "Planned",
+    state: "Building for Alpha",
   },
   {
     title: "Statamic Flat Themed Edition",
     description:
       "A future DiscussionBridge-designed Statamic experience running on the Flat content profile.",
     origin: "statamic-flat-themed.demo.discussionbridge.dev",
-    state: "Planned",
+    state: "Future edition",
     note: "Begins after the stock Flat workflow is established.",
   },
   {
@@ -101,7 +106,7 @@ export const statamicDemos: Demo[] = [
     description:
       "The same future design language exercised independently against Statamic's database-backed profile.",
     origin: "statamic-db-themed.demo.discussionbridge.dev",
-    state: "Planned",
+    state: "Future edition",
     note: "Begins after the stock DB workflow is established.",
   },
 ];
@@ -112,7 +117,7 @@ export const discourseDemos: Demo[] = [
     description:
       "A hands-on, resettable Discourse publishing environment where approved demo users can publish through DiscussionBridge.",
     origin: "bridge.demo.discussionbridge.dev",
-    state: "Planned",
+    state: "Building for Alpha",
     note: "Public examples, contact-requested access, individual expiring credentials, and periodic coordinated resets.",
   },
 ];
@@ -123,34 +128,34 @@ export const collections = [
     description: "The flagship Astro + Starlight experience, a plain Astro reference, and the stock Starlight control.",
     href: "/astro/",
     count: "3 demonstrations",
-    state: "Live",
+    state: "Live · Alpha refresh",
   },
   {
     title: "WordPress",
     description: "A stock WordPress installation proving the Bridge without replacing the platform's native presentation.",
     href: "/wordpress/",
     count: "1 initial demonstration",
-    state: "Planned",
+    state: "Building for Alpha",
   },
   {
     title: "Ghost",
     description: "A stock integration first, followed by a purpose-built DiscussionBridge themed edition.",
     href: "/ghost/",
     count: "2 demonstrations",
-    state: "Planned",
+    state: "Building for Alpha",
   },
   {
     title: "Statamic",
     description: "Flat and DB profiles proven separately, then extended with matching themed editions.",
     href: "/statamic/",
     count: "4 demonstrations",
-    state: "Planned",
+    state: "Building for Alpha",
   },
   {
     title: "Discourse Publisher",
     description: "The Bridge: a controlled, hands-on Discourse-to-Discourse publishing demonstration.",
     href: "/discourse/",
     count: "1 interactive demonstration",
-    state: "Planned",
+    state: "Building for Alpha",
   },
 ];
