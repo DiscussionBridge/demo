@@ -119,6 +119,13 @@ The chooser now labels WordPress `Live`, links the collection card to the
 actual demo, and links its Discussion action to topic 22. Ghost, both Statamic
 profiles, and The Bridge remain non-clickable Alpha build targets.
 
+The live-state chooser update is committed as
+`ce4529a` (`Publish live WordPress demo`), pushed to `origin/main`, and deployed
+as Cloudflare Worker version `6e45d9e5-972b-4a5f-a0ab-13e48bf4ae29`.
+Post-deployment requests returned HTTPS 200 for the chooser apex, WordPress
+collection, WordPress demo home, both demo-direction pages, and both mapped
+Discourse topic JSON endpoints.
+
 ## Verification
 
 - `npm run build` builds six static pages.
@@ -134,9 +141,7 @@ profiles, and The Bridge remain non-clickable Alpha build targets.
 
 ## Next implementation boundary
 
-1. Commit, push, and publish the chooser's WordPress-live state; then verify the
-   six generated routes and new public destination.
-2. Promote the stock Ghost demo through the same complete content,
+1. Promote the stock Ghost demo through the same complete content,
    presentation, retry, credential, coexistence, and rollback gates.
-3. Continue with Statamic Flat and DB independently before provisioning The
+2. Continue with Statamic Flat and DB independently before provisioning The
    Bridge publishing forum.
