@@ -90,14 +90,20 @@ export const statamicDemos: Demo[] = [
     description:
       "A stock Statamic installation with file-backed content, its own Bridge connection, and a complete discussion workflow.",
     origin: "statamic-flat.demo.discussionbridge.dev",
-    state: "Building for Alpha",
+    state: "Live",
+    href: "https://statamic-flat.demo.discussionbridge.dev/",
+    discussionHref: "https://sandbox-forum.discussionbridge.dev/t/statamic-flat-publishing-connected-to-discourse/26",
+    note: "Both directions are live: a file-backed entry publishes its real body to Discourse, and a separate page presents Discourse-authored content through the server-side addon.",
   },
   {
     title: "Statamic DB",
     description:
       "A stock Statamic installation with database-backed content and independently proven Bridge behavior.",
     origin: "statamic-db.demo.discussionbridge.dev",
-    state: "Building for Alpha",
+    state: "Live",
+    href: "https://statamic-db.demo.discussionbridge.dev/",
+    discussionHref: "https://sandbox-forum.discussionbridge.dev/t/statamic-db-publishing-connected-to-discourse/27",
+    note: "Both directions are live on an independent Eloquent-backed profile with its own origin, connection, credential, delivery state, Bridge Records, and topics.",
   },
   {
     title: "Statamic Flat Themed Edition",
@@ -155,7 +161,7 @@ export const collections = [
     description: "Flat and DB profiles proven separately, then extended with matching themed editions.",
     href: "/statamic/",
     count: "4 demonstrations",
-    state: "Building for Alpha",
+    state: "Live · themed editions planned",
   },
   {
     title: "Discourse Publisher",
