@@ -41,6 +41,7 @@ import DemoLayout from "../layouts/DemoLayout.astro";
   </section>
 
   <div class="status-key" aria-label="Demo status key">
+    <span><i class="live-complete"></i> Live</span>
     <span><i class="live"></i> Live · refresh underway</span>
     <span><i class="building"></i> Building for Alpha</span>
     <span><i class="control"></i> Comparison control</span>
@@ -85,6 +86,7 @@ import DemoLayout from "../layouts/DemoLayout.astro";
   .status-key span { display: inline-flex; align-items: center; gap: 7px; }
   .status-key i { width: 9px; height: 9px; border-radius: 50%; background: #d7dde2; }
   .status-key .live { background: #62a76c; }
+  .status-key .live-complete { background: #2d7a3d; }
   .status-key .building { background: #4d82bb; }
   .status-key .control { background: #7f91a1; }
   .status-key .future { background: #b7bdc3; }

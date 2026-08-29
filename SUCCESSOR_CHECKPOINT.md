@@ -74,8 +74,50 @@ marked `Building for Alpha` without live destination links.
 The initial implementation is committed as
 `1d323e735724e07de978e50fb4053199266e51b9` (`Build DiscussionBridge demo
 estate navigation`), tree
-`1ee8aecf5031342975afe1e2ff000c79b57dde0b`. It is one local commit ahead of
-the historical remote `main`. Nothing has been pushed or published.
+`1ee8aecf5031342975afe1e2ff000c79b57dde0b`. Later publication history is
+recorded above and in Git.
+
+## Live stock WordPress demo
+
+Phil authorized Bridge Boss to proceed without waiting between implementation
+gates. The first non-Astro public demo is now live at
+`https://wordpress.demo.discussionbridge.dev/` using WordPress core's Twenty
+Twenty-Five presentation.
+
+- Cloudflare DNS is an explicit DNS-only CNAME from
+  `wordpress.demo.discussionbridge.dev` to the retained infrastructure alias
+  `wordpress-sandbox.codeworkslabs.net`.
+- The origin certificate now covers both names. Nginx serves the new demo name
+  canonically and retains the old name as a rollback/redirect alias.
+- WordPress `home` and `siteurl` are the new demo origin. The public title is
+  **DiscussionBridge WordPress Demo** with the tagline **Stock WordPress,
+  connected to Discourse**.
+- A fresh receiver connection named **WordPress Demo** uses exact origin
+  `https://wordpress.demo.discussionbridge.dev`, lane `wordpress-demo`, both
+  directions, and adapter `wordpress-discussionbridge` version
+  `0.1.0-alpha.2`. Its protected one-time secret remains only in the server
+  credential boundary.
+- The To-Discourse article is
+  `/wordpress-publishing-connected-to-discourse/`, Bridge Record
+  `64ca8bc0-7aea-4e18-9968-c9e665c94731`, topic 22. A manual retry returned
+  `resolved` with the same record and topic.
+- The From-Discourse page is `/from-the-bridge/`, Bridge Record
+  `ad4de3ff-f10e-4b6f-bac7-c30e313e9715`, topic 23, authored by the dedicated
+  `bridge-demo` forum identity. It renders bounded sanitized cooked content and
+  the canonical forum link server-side.
+- WP Discourse 2.6.4 remains installed but inert: its URL/API key are blank,
+  auto/force publication are off, and the live demo article has none of its
+  collision-driving metadata.
+- Public checks returned HTTPS 200 for the home, article, and From-Discourse
+  page. Public HTML contains neither the connection secret nor connection ID.
+- The pre-promotion rollback package is
+  `/var/backups/discussionbridge/wordpress-sandbox-pre-public-demo-20260829T201500Z`;
+  its root-only database, `wp-content`, config, Nginx, PHP-FPM, credential, and
+  manifest members passed archive and SHA-256 verification before mutation.
+
+The chooser now labels WordPress `Live`, links the collection card to the
+actual demo, and links its Discussion action to topic 22. Ghost, both Statamic
+profiles, and The Bridge remain non-clickable Alpha build targets.
 
 ## Verification
 
@@ -92,11 +134,9 @@ the historical remote `main`. Nothing has been pushed or published.
 
 ## Next implementation boundary
 
-1. Correct the shared adapter contract so To-Discourse flows carry meaningful
-   source content and each originating page presents its mapped discussion.
-2. Create the stock public demo instances one profile at a time, beginning with
-   the first complete content-and-presentation workflow rather than copying the
-   current transport-only test fixtures.
-
-No DNS, Cloudflare production deployment, platform installation, forum change,
-or provider mutation has occurred in this slice.
+1. Commit, push, and publish the chooser's WordPress-live state; then verify the
+   six generated routes and new public destination.
+2. Promote the stock Ghost demo through the same complete content,
+   presentation, retry, credential, coexistence, and rollback gates.
+3. Continue with Statamic Flat and DB independently before provisioning The
+   Bridge publishing forum.

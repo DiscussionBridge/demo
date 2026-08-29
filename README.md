@@ -28,8 +28,9 @@ The public hierarchy is:
 - `/statamic/` — independent Flat and DB profiles plus future themed editions;
 - `/discourse/` — The Bridge, the planned controlled hands-on publishing forum.
 
-Existing Astro destinations remain live. Undeployed platform origins are shown
-as planned and are not linked as though they already exist. The agreed
+Existing Astro destinations and the stock WordPress demo remain live.
+Undeployed platform origins are shown as planned and are not linked as though
+they already exist. The agreed
 hands-on forum hostname is `bridge.demo.discussionbridge.dev`; its short public
 name is **The Bridge**.
 
@@ -53,5 +54,5 @@ npm run build
 npm run deploy:dry-run
 ```
 
-Production deployment requires the normal reviewed deployment gate; repository
+Production deployment requires explicit product authority; repository
 membership or a successful local build does not authorize publication.

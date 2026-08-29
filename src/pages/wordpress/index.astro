@@ -4,11 +4,11 @@ import { wordpressDemos } from "../../data/demo-estate";
 import DemoLayout from "../../layouts/DemoLayout.astro";
 ---
 
-<DemoLayout title="WordPress demo · DiscussionBridge" description="The stock WordPress DiscussionBridge demonstration being built for Alpha." activePath="/wordpress/">
+<DemoLayout title="WordPress demo · DiscussionBridge" description="Explore the live stock WordPress DiscussionBridge demonstration in both directions." activePath="/wordpress/">
   <section class="page-intro">
     <p class="kicker">Stock platform proof</p>
     <h1>WordPress, with the Bridge magic.</h1>
-    <p>The initial WordPress demonstration will preserve the familiar stock platform experience while proving real publishing content, mapped discussion, retry, and presentation behavior.</p>
+    <p>The live WordPress demonstration preserves the familiar stock platform experience while proving real publishing content, stable retry identity, mapped interactive discussion, and server-rendered Discourse content.</p>
   </section>
   <div class="demo-grid">{wordpressDemos.map((demo) => <DemoCard demo={demo} />)}</div>
 </DemoLayout>

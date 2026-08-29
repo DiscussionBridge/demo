@@ -1,5 +1,6 @@
 export type DemoState =
   | "Flagship"
+  | "Live"
   | "Live refresh"
   | "Control"
   | "Building for Alpha"
@@ -55,8 +56,10 @@ export const wordpressDemos: Demo[] = [
     description:
       "A stock WordPress installation with the native DiscussionBridge adapter, real published content, and its mapped discussion.",
     origin: "wordpress.demo.discussionbridge.dev",
-    state: "Building for Alpha",
-    note: "Stock/core presentation is the initial WordPress demo boundary.",
+    state: "Live",
+    href: "https://wordpress.demo.discussionbridge.dev/",
+    discussionHref: "https://sandbox-forum.discussionbridge.dev/t/wordpress-publishing-connected-to-discourse/22",
+    note: "Both directions are live on WordPress core presentation: mapped interactive discussion and server-rendered Discourse content.",
   },
 ];
 
@@ -135,7 +138,7 @@ export const collections = [
     description: "A stock WordPress installation proving the Bridge without replacing the platform's native presentation.",
     href: "/wordpress/",
     count: "1 initial demonstration",
-    state: "Building for Alpha",
+    state: "Live",
   },
   {
     title: "Ghost",
