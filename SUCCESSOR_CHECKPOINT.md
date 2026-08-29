@@ -62,7 +62,16 @@ remain non-clickable until their installations are actually ready.
 This public build map does not expand the Alpha target to the future platform
 and service candidates recorded in the product checkpoint.
 
-The implementation is committed as
+The refinement is committed as
+`e98b17162092ab1a04f9ea4fb3425d2e46532bcd` (`Publish the six-profile Alpha
+build map`) and pushed to `origin/main`. The exact validated static build was
+published to `demo.discussionbridge.dev` as Cloudflare Worker version
+`9551262e-26f7-4cc8-8c00-884d0e769d04`. Post-deployment requests to the apex
+and all five collection routes returned HTTPS 200; the apex contained the exact
+six-profile Alpha statement and unfinished profile pages remained explicitly
+marked `Building for Alpha` without live destination links.
+
+The initial implementation is committed as
 `1d323e735724e07de978e50fb4053199266e51b9` (`Build DiscussionBridge demo
 estate navigation`), tree
 `1ee8aecf5031342975afe1e2ff000c79b57dde0b`. It is one local commit ahead of
