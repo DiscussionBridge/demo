@@ -42,6 +42,12 @@ reviewed deployment gate.
   `public/og.png` has SHA-256
   `4e76577031634b3e1ec19083721c87eee3c303819bc8461c05087a352b59405f`.
 
+The implementation is committed as
+`1d323e735724e07de978e50fb4053199266e51b9` (`Build DiscussionBridge demo
+estate navigation`), tree
+`1ee8aecf5031342975afe1e2ff000c79b57dde0b`. It is one local commit ahead of
+the historical remote `main`. Nothing has been pushed or published.
+
 ## Verification
 
 - `npm run build` builds six static pages.
@@ -57,10 +63,9 @@ reviewed deployment gate.
 
 ## Next implementation boundary
 
-1. Freeze and commit the chooser/navigation slice.
-2. Correct the shared adapter contract so To-Discourse flows carry meaningful
+1. Correct the shared adapter contract so To-Discourse flows carry meaningful
    source content and each originating page presents its mapped discussion.
-3. Create the stock public demo instances one profile at a time, beginning with
+2. Create the stock public demo instances one profile at a time, beginning with
    the first complete content-and-presentation workflow rather than copying the
    current transport-only test fixtures.
 
