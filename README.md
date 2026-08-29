@@ -28,7 +28,7 @@ The public hierarchy is:
 - `/statamic/` — independent Flat and DB profiles plus future themed editions;
 - `/discourse/` — The Bridge, the planned controlled hands-on publishing forum.
 
-Existing Astro destinations and the stock WordPress demo remain live.
+Existing Astro destinations plus the stock WordPress and Ghost demos are live.
 Undeployed platform origins are shown as planned and are not linked as though
 they already exist. The agreed
 hands-on forum hostname is `bridge.demo.discussionbridge.dev`; its short public

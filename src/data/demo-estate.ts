@@ -69,7 +69,10 @@ export const ghostDemos: Demo[] = [
     description:
       "A stock Ghost publication with a signed publishing workflow and server-side discussion presentation.",
     origin: "ghost.demo.discussionbridge.dev",
-    state: "Building for Alpha",
+    state: "Live",
+    href: "https://ghost.demo.discussionbridge.dev/",
+    discussionHref: "https://sandbox-forum.discussionbridge.dev/t/ghost-publishing-connected-to-discourse/24",
+    note: "Both directions are live: native signed-webhook publishing and a stock Ghost page that presents Discourse-authored content through the server-side adapter.",
   },
   {
     title: "Ghost Themed Edition",
@@ -145,7 +148,7 @@ export const collections = [
     description: "A stock integration first, followed by a purpose-built DiscussionBridge themed edition.",
     href: "/ghost/",
     count: "2 demonstrations",
-    state: "Building for Alpha",
+    state: "Live · themed edition planned",
   },
   {
     title: "Statamic",
