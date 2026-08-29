@@ -1,0 +1,93 @@
+---
+const { title, description, activePath = "/" } = Astro.props as {
+  title: string;
+  description: string;
+  activePath?: string;
+};
+
+const navItems = [
+  { href: "/", label: "All demos" },
+  { href: "/astro/", label: "Astro" },
+  { href: "/wordpress/", label: "WordPress" },
+  { href: "/ghost/", label: "Ghost" },
+  { href: "/statamic/", label: "Statamic" },
+  { href: "/discourse/", label: "The Bridge" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#102d32" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DiscussionBridge Demos" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://demo.discussionbridge.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="DiscussionBridge Demos — See the Bridge. Then cross it." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://demo.discussionbridge.dev/og.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="DiscussionBridge demos home">
+          <span class="brand-mark" aria-hidden="true">DB</span>
+          <span><strong>DiscussionBridge</strong><small>Live demonstrations</small></span>
+        </a>
+        <a class="product-link" href="https://discussionbridge.dev/">Product site</a>
+      </div>
+      <nav class="collection-nav" aria-label="Demo collections">
+        <div>
+          {navItems.map((item) => <a href={item.href} aria-current={activePath === item.href ? "page" : undefined}>{item.label}</a>)}
+        </div>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer>
+      <p>DiscussionBridge keeps published content connected to durable Discourse discussion.</p>
+      <nav aria-label="Footer navigation"><a href="https://discussionbridge.dev/">DiscussionBridge.dev</a><a href="https://forum.discussionbridge.dev/">Community forum</a></nav>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root { color-scheme: light; --bg: #f4f7f5; --panel: #fff; --ink: #172629; --ink-soft: #34494d; --muted: #607276; --line: #d8e2df; --accent: #137a75; --accent-strong: #075d59; --accent-soft: #dcf3ef; --gold-soft: #fff0c2; --gold-strong: #765500; --slate-soft: #e6ebf0; --slate-strong: #425363; --display-font: Georgia, "Times New Roman", serif; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; }
+  * { box-sizing: border-box; }
+  body { min-width: 320px; margin: 0; background: radial-gradient(circle at 8% 2%, rgb(41 157 145 / 13%), transparent 32rem), var(--bg); color: var(--ink); }
+  a { color: inherit; }
+  .site-header { border-bottom: 1px solid rgb(255 255 255 / 12%); background: #102d32; color: #fff; }
+  .header-inner, .collection-nav > div, main, footer { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+  .header-inner { display: flex; min-height: 96px; align-items: center; justify-content: space-between; gap: 20px; }
+  .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; }
+  .brand-mark { display: grid; width: 43px; height: 43px; place-items: center; border: 1px solid rgb(255 255 255 / 35%); border-radius: 12px; background: rgb(255 255 255 / 9%); font-family: var(--display-font); font-weight: 700; }
+  .brand strong, .brand small { display: block; }
+  .brand strong { font-family: var(--display-font); font-size: 1.3rem; }
+  .brand small { color: #b9d0d2; font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .product-link { color: #d7e8e8; font-size: 0.9rem; font-weight: 700; text-underline-offset: 0.25em; }
+  .collection-nav { border-top: 1px solid rgb(255 255 255 / 10%); }
+  .collection-nav > div { display: flex; overflow-x: auto; gap: 8px; padding-block: 11px; scrollbar-width: thin; }
+  .collection-nav a { flex: 0 0 auto; padding: 7px 11px; border-radius: 8px; color: #c6d9da; font-size: 0.88rem; font-weight: 750; text-decoration: none; }
+  .collection-nav a:hover, .collection-nav a[aria-current="page"] { background: rgb(255 255 255 / 11%); color: #fff; }
+  main { padding-block: clamp(42px, 7vw, 82px); }
+  .page-intro { max-width: 830px; margin-bottom: 36px; }
+  .kicker { margin: 0 0 10px; color: var(--accent-strong); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.12em; text-transform: uppercase; }
+  .page-intro h1 { max-width: 780px; margin: 0; font-family: var(--display-font); font-size: clamp(2.5rem, 6.5vw, 5.4rem); font-weight: 500; letter-spacing: -0.045em; line-height: 0.98; }
+  .page-intro > p:last-child { max-width: 720px; margin: 22px 0 0; color: var(--muted); font-size: clamp(1rem, 1.8vw, 1.22rem); }
+  .demo-grid, .collection-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .section-heading { margin: 56px 0 18px; font-family: var(--display-font); font-size: clamp(1.8rem, 4vw, 2.7rem); font-weight: 500; }
+  footer { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding-block: 28px 44px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.86rem; }
+  footer p { margin: 0; }
+  footer nav { display: flex; gap: 18px; }
+  footer a { color: var(--accent-strong); font-weight: 700; text-underline-offset: 0.2em; }
+  @media (max-width: 760px) { .demo-grid, .collection-grid { grid-template-columns: 1fr; } footer { align-items: flex-start; flex-direction: column; } }
+  @media (max-width: 520px) { .header-inner, .collection-nav > div, main, footer { width: min(100% - 28px, 1180px); } .header-inner { min-height: 84px; } .brand small, .product-link { display: none; } }
+</style>

@@ -13,11 +13,29 @@ Authoritative TODO: product-level work is tracked from
 
 Live service: `https://demo.discussionbridge.dev`
 
-Last reviewed: 2026-08-05
+Last reviewed: 2026-08-29
 
-This repository is the canonical source for the DiscussionBridge demo chooser.
-It links visitors to the independent Astro, Astro + Starlight, and stock
-Starlight demonstration sites. It does not own those demo implementations.
+This repository is the canonical source for the DiscussionBridge demo chooser
+and its platform-collection navigation. It does not own the independent demo
+implementations.
+
+The public hierarchy is:
+
+- `/` — master chooser with Astro + Starlight as the flagship experience;
+- `/astro/` — flagship, Plain Astro reference, and stock Starlight control;
+- `/wordpress/` — stock WordPress demonstration collection;
+- `/ghost/` — stock Ghost and future themed edition;
+- `/statamic/` — independent Flat and DB profiles plus future themed editions;
+- `/discourse/` — The Bridge, the planned controlled hands-on publishing forum.
+
+Existing Astro destinations remain live. Undeployed platform origins are shown
+as planned and are not linked as though they already exist. The agreed
+hands-on forum hostname is `bridge.demo.discussionbridge.dev`; its short public
+name is **The Bridge**.
+
+The chooser's canonical estate inventory is maintained in
+`src/data/demo-estate.ts`. Update that inventory before duplicating names or
+status copy inside page templates.
 
 ## Repository And Deployment
 

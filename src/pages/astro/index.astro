@@ -1,0 +1,14 @@
+---
+import DemoCard from "../../components/DemoCard.astro";
+import { astroDemos } from "../../data/demo-estate";
+import DemoLayout from "../../layouts/DemoLayout.astro";
+---
+
+<DemoLayout title="Astro demos · DiscussionBridge" description="Explore the flagship Astro + Starlight experience, plain Astro reference, and stock Starlight control." activePath="/astro/">
+  <section class="page-intro">
+    <p class="kicker">Flagship collection</p>
+    <h1>DiscussionBridge for Astro</h1>
+    <p>The original product focus remains the lead experience: a polished Astro + Starlight publication, supported by a plain Astro reference and an untouched Starlight comparison control.</p>
+  </section>
+  <div class="demo-grid">{astroDemos.map((demo) => <DemoCard demo={demo} />)}</div>
+</DemoLayout>

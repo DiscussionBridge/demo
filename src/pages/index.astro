@@ -1,213 +1,61 @@
 ---
-const demos = [
-  {
-    title: "Plain Astro",
-    description: "A core Astro publishing example with article content, content tags, and a Discourse companion topic.",
-    href: "https://astro.demo.discussionbridge.dev/",
-    discussionHref: "https://forum.discussionbridge.dev/t/core-astro-discussion-bridge-demo/34",
-    status: "Alpha",
-  },
-  {
-    title: "Astro + Starlight",
-    description: "A Starlight documentation demo with docs, blog, news, releases, content lanes, and comment display modes.",
-    href: "https://astrostarlight.demo.discussionbridge.dev/",
-    discussionHref: "https://forum.discussionbridge.dev/c/discussionbridge-for-astro/5",
-    status: "Alpha",
-  },
-  {
-    title: "Stock Starlight Control",
-    description: "A clean Starlight baseline for upgrade checks, warning checks, and comparison against the bridge demo.",
-    href: "https://stockstarlight.demo.discussionbridge.dev/",
-    discussionHref: "https://forum.discussionbridge.dev/c/discussionbridge-for-astro/5",
-    status: "Control",
-  },
-  {
-    title: "Future Integrations",
-    description: "The demo lane can grow to Statamic, ecommerce platforms, templates, plugins, and vertical examples.",
-    href: "https://discussionbridge.dev/",
-    discussionHref: "https://forum.discussionbridge.dev/",
-    status: "Planned",
-  },
-];
+import DemoCard from "../components/DemoCard.astro";
+import { collections, flagship } from "../data/demo-estate";
+import DemoLayout from "../layouts/DemoLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DiscussionBridge Demos</title>
-    <meta name="description" content="Demo chooser for DiscussionBridge integrations." />
-    <style>
-      :root {
-        color-scheme: light;
-        --bg: #f7f8fb;
-        --panel: #ffffff;
-        --text: #17202a;
-        --muted: #607086;
-        --line: #d9e1ea;
-        --accent: #116a7b;
-        --accent-soft: #e8f5f7;
-        --ink: #24313d;
-      }
+<DemoLayout title="DiscussionBridge Demos" description="Explore the flagship DiscussionBridge experience and live integration demonstrations across publishing platforms.">
+  <section class="page-intro">
+    <p class="kicker">One discussion, wherever content lives</p>
+    <h1>See the Bridge. Then cross it.</h1>
+    <p>Start with the flagship Astro + Starlight experience, compare stock platform integrations, and soon try the complete publishing workflow yourself in The Bridge.</p>
+  </section>
 
-      * {
-        box-sizing: border-box;
-      }
+  <section class="flagship-panel" aria-labelledby="flagship-title">
+    <div>
+      <p class="kicker">Flagship experience</p>
+      <h2 id="flagship-title">{flagship.title}</h2>
+      <p>{flagship.description}</p>
+      <p class="flagship-note">{flagship.note}</p>
+    </div>
+    <div class="flagship-actions">
+      <a class="primary-action" href={flagship.href}>Open the flagship</a>
+      <a href="/astro/">Explore the Astro collection</a>
+    </div>
+  </section>
 
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: "Segoe UI", Arial, sans-serif;
-        line-height: 1.5;
-      }
+  <h2 class="section-heading">Explore every platform</h2>
+  <div class="collection-grid">
+    {collections.map((collection) => (
+      <a class="collection-card" href={collection.href}>
+        <span>{collection.state}</span>
+        <h3>{collection.title}</h3>
+        <p>{collection.description}</p>
+        <small>{collection.count}</small>
+      </a>
+    ))}
+  </div>
 
-      header {
-        background: var(--ink);
-        color: #fff;
-        padding: 34px 28px;
-      }
+  <h2 class="section-heading">Current flagship</h2>
+  <div class="demo-grid"><DemoCard demo={flagship} /></div>
+</DemoLayout>
 
-      header div,
-      main {
-        max-width: 1080px;
-        margin: 0 auto;
-      }
-
-      h1 {
-        margin: 0 0 8px;
-        font-size: 42px;
-        letter-spacing: 0;
-      }
-
-      header p {
-        max-width: 760px;
-        margin: 0;
-        color: #d9e1ea;
-        font-size: 17px;
-      }
-
-      .product-nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-block-end: 20px;
-      }
-
-      .product-nav a {
-        color: #fff;
-        font-weight: 700;
-        text-underline-offset: 0.2em;
-      }
-
-      main {
-        padding: 28px;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-        gap: 16px;
-      }
-
-      .card {
-        min-height: 230px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        padding: 20px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--panel);
-      }
-
-      .eyebrow {
-        width: fit-content;
-        padding: 4px 8px;
-        border-radius: 5px;
-        background: var(--accent-soft);
-        color: var(--accent);
-        font-size: 12px;
-        font-weight: 800;
-        text-transform: uppercase;
-      }
-
-      .card h2 {
-        margin: 0;
-        font-size: 22px;
-        letter-spacing: 0;
-      }
-
-      .card p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: auto;
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        min-height: 38px;
-        padding: 8px 12px;
-        border-radius: 6px;
-        background: var(--accent);
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
-      }
-
-      .button.secondary {
-        background: var(--accent-soft);
-        color: var(--accent);
-      }
-
-      .note {
-        margin-top: 18px;
-        padding: 14px 16px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: #fff;
-        color: var(--muted);
-        font-size: 14px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div>
-        <nav class="product-nav" aria-label="Product navigation">
-          <a href="https://discussionbridge.dev/">DiscussionBridge.dev</a>
-        </nav>
-        <h1>DiscussionBridge Demos</h1>
-        <p>Choose a live integration demo and see how static publishing stays connected to Discourse discussion.</p>
-      </div>
-    </header>
-
-    <main>
-      <div class="grid">
-        {demos.map((demo) => (
-          <section class="card">
-            <span class="eyebrow">{demo.status}</span>
-            <h2>{demo.title}</h2>
-            <p>{demo.description}</p>
-            <div class="actions">
-              <a class="button" href={demo.href}>Open Demo</a>
-              <a class="button secondary" href={demo.discussionHref}>Discussion</a>
-            </div>
-          </section>
-        ))}
-      </div>
-
-      <p class="note">
-        Canonical demo source belongs with the integration package that proves it. This chooser belongs with the product site.
-      </p>
-    </main>
-  </body>
-</html>
+<style>
+  .flagship-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 36px; align-items: end; padding: clamp(26px, 5vw, 54px); border-radius: 28px; background: #102d32; color: #fff; box-shadow: 0 26px 70px rgb(16 45 50 / 18%); }
+  .flagship-panel h2, .flagship-panel p { margin: 0; }
+  .flagship-panel h2 { max-width: 700px; font-family: var(--display-font); font-size: clamp(2rem, 5vw, 4rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1; }
+  .flagship-panel > div > p:not(.kicker) { max-width: 690px; margin-top: 18px; color: #c6d8da; }
+  .flagship-panel .kicker { margin-bottom: 12px; color: #8edbd2; }
+  .flagship-note { font-size: 0.86rem; }
+  .flagship-actions { display: flex; min-width: 205px; align-items: flex-start; flex-direction: column; gap: 14px; }
+  .flagship-actions a { color: #d9eeee; font-weight: 800; text-underline-offset: 0.25em; }
+  .flagship-actions .primary-action { padding: 11px 16px; border-radius: 10px; background: #fff; color: #102d32; text-decoration: none; }
+  .collection-card { display: grid; min-height: 240px; align-content: start; gap: 12px; padding: clamp(22px, 4vw, 34px); border: 1px solid var(--line); border-radius: 22px; background: rgb(255 255 255 / 78%); text-decoration: none; transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease; }
+  .collection-card:hover { border-color: #9dc8c2; box-shadow: 0 18px 45px rgb(32 49 64 / 9%); transform: translateY(-2px); }
+  .collection-card span { color: var(--accent-strong); font-size: 0.72rem; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
+  .collection-card h3, .collection-card p, .collection-card small { margin: 0; }
+  .collection-card h3 { font-family: var(--display-font); font-size: clamp(1.65rem, 3vw, 2.35rem); font-weight: 500; }
+  .collection-card p { color: var(--muted); }
+  .collection-card small { align-self: end; padding-top: 16px; color: var(--ink-soft); font-weight: 800; }
+  @media (max-width: 760px) { .flagship-panel { grid-template-columns: 1fr; align-items: start; } }
+</style>

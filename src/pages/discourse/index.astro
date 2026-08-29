@@ -1,0 +1,31 @@
+---
+import DemoCard from "../../components/DemoCard.astro";
+import { discourseDemos } from "../../data/demo-estate";
+import DemoLayout from "../../layouts/DemoLayout.astro";
+---
+
+<DemoLayout title="The Bridge · DiscussionBridge demos" description="The planned hands-on DiscussionBridge publishing forum at bridge.demo.discussionbridge.dev." activePath="/discourse/">
+  <section class="page-intro">
+    <p class="kicker">Hands-on demonstration</p>
+    <h1>The Bridge</h1>
+    <p>A dedicated, resettable Discourse publishing forum—separate from the community, build sandbox, and pre-production forum—where approved demo users can experience the workflow directly.</p>
+  </section>
+  <div class="demo-grid">{discourseDemos.map((demo) => <DemoCard demo={demo} />)}</div>
+  <section class="access-model">
+    <p class="kicker">Planned access model</p>
+    <h2>Public to explore. Controlled to operate.</h2>
+    <ul>
+      <li>Everyone can read the seeded demonstrations and follow their connected content.</li>
+      <li>Demo Publishers receive individual, expiring credentials after contacting us.</li>
+      <li>Publishing is limited to a dedicated demo category with bounded retention and coordinated resets.</li>
+      <li>Full Discourse administration and connection secrets remain private.</li>
+    </ul>
+  </section>
+</DemoLayout>
+
+<style>
+  .access-model { max-width: 850px; margin-top: 54px; padding: clamp(24px, 5vw, 44px); border-left: 4px solid var(--accent); border-radius: 0 18px 18px 0; background: var(--panel); }
+  .access-model h2 { margin: 0; font-family: var(--display-font); font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 500; }
+  .access-model ul { margin: 20px 0 0; padding-left: 1.2rem; color: var(--muted); }
+  .access-model li + li { margin-top: 8px; }
+</style>

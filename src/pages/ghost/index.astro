@@ -1,0 +1,14 @@
+---
+import DemoCard from "../../components/DemoCard.astro";
+import { ghostDemos } from "../../data/demo-estate";
+import DemoLayout from "../../layouts/DemoLayout.astro";
+---
+
+<DemoLayout title="Ghost demos · DiscussionBridge" description="Stock and themed Ghost demonstrations for DiscussionBridge." activePath="/ghost/">
+  <section class="page-intro">
+    <p class="kicker">Platform collection</p>
+    <h1>Ghost, proven stock and designed forward.</h1>
+    <p>We will establish the complete Bridge workflow against stock Ghost first, then build a first-party themed edition without coupling presentation design to the adapter transport.</p>
+  </section>
+  <div class="demo-grid">{ghostDemos.map((demo) => <DemoCard demo={demo} />)}</div>
+</DemoLayout>

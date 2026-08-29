@@ -1,0 +1,14 @@
+---
+import DemoCard from "../../components/DemoCard.astro";
+import { wordpressDemos } from "../../data/demo-estate";
+import DemoLayout from "../../layouts/DemoLayout.astro";
+---
+
+<DemoLayout title="WordPress demo · DiscussionBridge" description="The planned stock WordPress DiscussionBridge demonstration." activePath="/wordpress/">
+  <section class="page-intro">
+    <p class="kicker">Stock platform proof</p>
+    <h1>WordPress, with the Bridge magic.</h1>
+    <p>The initial WordPress demonstration will preserve the familiar stock platform experience while proving real publishing content, mapped discussion, retry, and presentation behavior.</p>
+  </section>
+  <div class="demo-grid">{wordpressDemos.map((demo) => <DemoCard demo={demo} />)}</div>
+</DemoLayout>
