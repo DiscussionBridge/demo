@@ -1,14 +1,14 @@
 ---
 import DemoCard from "../components/DemoCard.astro";
-import { collections, flagship } from "../data/demo-estate";
+import { collections, flagship, inaugural } from "../data/demo-estate";
 import DemoLayout from "../layouts/DemoLayout.astro";
 ---
 
 <DemoLayout title="DiscussionBridge Demos" description="Explore the flagship DiscussionBridge experience and live integration demonstrations across publishing platforms.">
   <section class="page-intro">
-    <p class="kicker">One discussion, wherever content lives</p>
+    <p class="kicker">Publish anywhere. Keep the discussion.</p>
     <h1>See the Bridge. Then cross it.</h1>
-    <p>Start with the flagship Astro + Starlight experience, compare stock platform integrations, and open The Bridge to see Discourse publishing through DiscussionBridge in both directions.</p>
+    <p>DiscussionBridge is a family of focused tools. Start with The Bridge, our Discourse-powered flagship, then explore the inaugural Astro + Starlight product and every live platform profile.</p>
   </section>
 
   <section class="flagship-panel" aria-labelledby="flagship-title">
@@ -20,29 +20,33 @@ import DemoLayout from "../layouts/DemoLayout.astro";
     </div>
     <div class="flagship-actions">
       <a class="primary-action" href={flagship.href}>Open the flagship</a>
-      <a href="/astro/">Explore the Astro collection</a>
+      <a href="/discourse/">Explore the flagship profile</a>
     </div>
   </section>
 
   <section class="alpha-map" aria-labelledby="alpha-map-title">
     <div>
       <p class="kicker">Building for Alpha</p>
-      <h2 id="alpha-map-title">One native Discourse plugin. Six real publishing profiles.</h2>
-      <p>DiscussionBridge Alpha is being built across Astro, WordPress, Ghost, Statamic Flat, Statamic DB, and publishing Discourse. Each profile will have real content, its own connection, a durable mapped discussion, retry behavior, and native presentation.</p>
+      <h2 id="alpha-map-title">One native Discourse plugin. Seven real publishing profiles.</h2>
+      <p>Alpha spans Astro, Ghost, Hugo, Statamic DB, Statamic Flat, WordPress, and The Bridge as Discourse Publisher. Every profile must earn its place with real content, stable identity, safe retry, and native presentation.</p>
     </div>
     <ol aria-label="DiscussionBridge Alpha publishing profiles">
       <li><strong>01</strong> Astro</li>
-      <li><strong>02</strong> WordPress</li>
-      <li><strong>03</strong> Ghost</li>
-      <li><strong>04</strong> Statamic Flat</li>
-      <li><strong>05</strong> Statamic DB</li>
-      <li><strong>06</strong> Publishing Discourse</li>
+      <li><strong>02</strong> Ghost</li>
+      <li><strong>03</strong> Hugo</li>
+      <li><strong>04</strong> Statamic DB</li>
+      <li><strong>05</strong> Statamic Flat</li>
+      <li><strong>06</strong> WordPress</li>
+      <li><strong>07</strong> The Bridge — Discourse as Publisher</li>
     </ol>
   </section>
 
   <div class="status-key" aria-label="Demo status key">
+    <span><i class="flagship"></i> Flagship</span>
+    <span><i class="inaugural"></i> Inaugural product</span>
     <span><i class="live-complete"></i> Live</span>
     <span><i class="live"></i> Live · refresh underway</span>
+    <span><i class="late-alpha"></i> Late Alpha</span>
     <span><i class="building"></i> Building for Alpha</span>
     <span><i class="control"></i> Comparison control</span>
     <span><i class="future"></i> Future edition</span>
@@ -60,8 +64,17 @@ import DemoLayout from "../layouts/DemoLayout.astro";
     ))}
   </div>
 
-  <h2 class="section-heading">Current flagship</h2>
-  <div class="demo-grid"><DemoCard demo={flagship} /></div>
+  <section class="roadmap-panel" aria-labelledby="roadmap-title">
+    <div>
+      <p class="kicker">A roadmap shaped by use</p>
+      <h2 id="roadmap-title">Alpha first. Focused capabilities next.</h2>
+      <p>Network, Migration, Identity, advanced profiles, and later platform adapters remain separate directions. We will invite real users to help decide which needs deserve engineering next.</p>
+    </div>
+    <div class="roadmap-actions"><a href="https://discussionbridge.dev/roadmap/">Read the roadmap</a><a href="https://forum.discussionbridge.dev/">Bring us your use case</a></div>
+  </section>
+
+  <h2 class="section-heading">Inaugural platform product</h2>
+  <div class="demo-grid"><DemoCard demo={inaugural} /></div>
 </DemoLayout>
 
 <style>
@@ -87,6 +100,9 @@ import DemoLayout from "../layouts/DemoLayout.astro";
   .status-key i { width: 9px; height: 9px; border-radius: 50%; background: #d7dde2; }
   .status-key .live { background: #62a76c; }
   .status-key .live-complete { background: #2d7a3d; }
+  .status-key .flagship { background: #c89b28; }
+  .status-key .inaugural { background: #8e69c2; }
+  .status-key .late-alpha { background: #d88a2b; }
   .status-key .building { background: #4d82bb; }
   .status-key .control { background: #7f91a1; }
   .status-key .future { background: #b7bdc3; }
@@ -97,5 +113,11 @@ import DemoLayout from "../layouts/DemoLayout.astro";
   .collection-card h3 { font-family: var(--display-font); font-size: clamp(1.65rem, 3vw, 2.35rem); font-weight: 500; }
   .collection-card p { color: var(--muted); }
   .collection-card small { align-self: end; padding-top: 16px; color: var(--ink-soft); font-weight: 800; }
-  @media (max-width: 760px) { .flagship-panel, .alpha-map { grid-template-columns: 1fr; align-items: start; } }
+  .roadmap-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: end; margin-top: 54px; padding: clamp(26px, 5vw, 44px); border: 1px solid var(--line); border-radius: 24px; background: var(--accent-soft); }
+  .roadmap-panel h2, .roadmap-panel p { margin: 0; }
+  .roadmap-panel h2 { font-family: var(--display-font); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 500; }
+  .roadmap-panel div > p:last-child { max-width: 720px; margin-top: 14px; color: var(--muted); }
+  .roadmap-actions { display: flex; min-width: 190px; align-items: flex-start; flex-direction: column; gap: 10px; }
+  .roadmap-actions a { color: var(--accent-strong); font-weight: 800; text-underline-offset: 0.25em; }
+  @media (max-width: 760px) { .flagship-panel, .alpha-map, .roadmap-panel { grid-template-columns: 1fr; align-items: start; } }
 </style>

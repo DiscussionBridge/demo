@@ -8,9 +8,10 @@ const { title, description, activePath = "/" } = Astro.props as {
 const navItems = [
   { href: "/", label: "All demos" },
   { href: "/astro/", label: "Astro" },
-  { href: "/wordpress/", label: "WordPress" },
   { href: "/ghost/", label: "Ghost" },
+  { href: "/hugo/", label: "Hugo" },
   { href: "/statamic/", label: "Statamic" },
+  { href: "/wordpress/", label: "WordPress" },
   { href: "/discourse/", label: "The Bridge" },
 ];
 ---
@@ -53,8 +54,8 @@ const navItems = [
     </header>
     <main><slot /></main>
     <footer>
-      <p>DiscussionBridge keeps published content connected to durable Discourse discussion.</p>
-      <nav aria-label="Footer navigation"><a href="https://discussionbridge.dev/">DiscussionBridge.dev</a><a href="https://forum.discussionbridge.dev/">Community forum</a></nav>
+      <p>Publish anywhere. Keep the discussion.</p>
+      <nav aria-label="Footer navigation"><a href="https://discussionbridge.dev/roadmap/">Roadmap</a><a href="https://discussionbridge.dev/">DiscussionBridge.dev</a><a href="https://forum.discussionbridge.dev/">Community forum</a></nav>
     </footer>
   </body>
 </html>

@@ -141,7 +141,31 @@ Discourse topic JSON endpoints.
 
 ## Next implementation boundary
 
-1. Promote the stock Ghost demo through the same complete content,
-   presentation, retry, credential, coexistence, and rollback gates.
-2. Continue with Statamic Flat and DB independently before provisioning The
-   Bridge publishing forum.
+Rework DiscussionBridge for Astro + Starlight as one coherent standalone
+product with its included optional Astro adapter subsystem. Preserve its
+standard-Discourse simple/full paths, add the truthful Bridge-enhanced path,
+and define adoption of existing topic associations without duplicate topics or
+a second Astro package. Keep the current live demonstrations intact until
+replacement behavior is built and verified.
+
+## Product-family hierarchy refresh
+
+Phil and Bridge Boss corrected the public hierarchy after the original Alpha
+profiles became functional. DiscussionBridge is the product family; The Bridge
+is the Discourse-powered flagship; DiscussionBridge for Astro + Starlight is
+the inaugural standalone platform product and becomes Bridge-enhanced by
+choice.
+
+The chooser now leads with The Bridge, identifies Astro + Starlight as the
+inaugural product, and lists seven Alpha profiles in the approved order:
+Astro, Ghost, Hugo, Statamic DB, Statamic Flat, WordPress, and The Bridge —
+Discourse as Publisher. Hugo has its own `/hugo/` collection page and is
+truthfully marked late Alpha with no live destination link. The chooser also
+links the concise product roadmap and invites concrete user workflows to shape
+future Network, Migration, Identity, advanced-profile and adapter work.
+
+Local verification passes: seven static routes build, the Cloudflare dry run
+reads 17 generated files, and desktop visual inspection confirms the flagship,
+Alpha list, collection ordering, roadmap invitation and inaugural-product card.
+Production commit, push, deployment identity and public replay follow in the
+next checkpoint update.

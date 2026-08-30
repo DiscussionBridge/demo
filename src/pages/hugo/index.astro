@@ -1,0 +1,14 @@
+---
+import DemoCard from "../../components/DemoCard.astro";
+import { hugoDemos } from "../../data/demo-estate";
+import DemoLayout from "../../layouts/DemoLayout.astro";
+---
+
+<DemoLayout title="Hugo demo · DiscussionBridge" description="The planned late-Alpha Hugo publishing profile for DiscussionBridge." activePath="/hugo/">
+  <section class="page-intro">
+    <p class="kicker">Late Alpha</p>
+    <h1>Hugo joins before Beta feature lock.</h1>
+    <p>The Hugo profile will prove that generated content can retain stable discussion identity across builds without browser credentials, duplicate topics, or a Hugo-specific receiver contract.</p>
+  </section>
+  <div class="demo-grid">{hugoDemos.map((demo) => <DemoCard demo={demo} />)}</div>
+</DemoLayout>
