@@ -127,10 +127,13 @@ export const discourseDemos: Demo[] = [
   {
     title: "The Bridge",
     description:
-      "A hands-on, resettable Discourse publishing environment where approved demo users can publish through DiscussionBridge.",
+      "A live stock Discourse publishing environment proving real content in both DiscussionBridge directions.",
     origin: "bridge.demo.discussionbridge.dev",
-    state: "Building for Alpha",
-    note: "Public examples, contact-requested access, individual expiring credentials, and periodic coordinated resets.",
+    state: "Live",
+    href: "https://bridge.demo.discussionbridge.dev/",
+    discussionHref:
+      "https://bridge.demo.discussionbridge.dev/t/the-bridge-publishing-discourse-content-through-discussionbridge/10",
+    note: "Public examples are live now. Contact-requested demo-user access and periodic coordinated resets remain the next access layer.",
   },
 ];
 
@@ -168,6 +171,6 @@ export const collections = [
     description: "The Bridge: a controlled, hands-on Discourse-to-Discourse publishing demonstration.",
     href: "/discourse/",
     count: "1 interactive demonstration",
-    state: "Building for Alpha",
+    state: "Live",
   },
 ];

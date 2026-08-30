@@ -4,20 +4,20 @@ import { discourseDemos } from "../../data/demo-estate";
 import DemoLayout from "../../layouts/DemoLayout.astro";
 ---
 
-<DemoLayout title="The Bridge · DiscussionBridge demos" description="The planned hands-on DiscussionBridge publishing forum at bridge.demo.discussionbridge.dev." activePath="/discourse/">
+<DemoLayout title="The Bridge · DiscussionBridge demos" description="The live stock Discourse publishing forum at bridge.demo.discussionbridge.dev." activePath="/discourse/">
   <section class="page-intro">
-    <p class="kicker">Hands-on demonstration</p>
+    <p class="kicker">Live stock demonstration</p>
     <h1>The Bridge</h1>
-    <p>A dedicated, resettable Discourse publishing forum—separate from the community, build sandbox, and pre-production forum—where approved demo users can experience the workflow directly.</p>
+    <p>A dedicated Discourse publishing forum—separate from the community, build sandbox, and pre-production forum—with real content flowing in both directions through DiscussionBridge.</p>
   </section>
   <div class="demo-grid">{discourseDemos.map((demo) => <DemoCard demo={demo} />)}</div>
   <section class="access-model">
-    <p class="kicker">Planned access model</p>
+    <p class="kicker">Access model</p>
     <h2>Public to explore. Controlled to operate.</h2>
     <ul>
-      <li>Everyone can read the seeded demonstrations and follow their connected content.</li>
-      <li>Demo Publishers receive individual, expiring credentials after contacting us.</li>
-      <li>Publishing is limited to a dedicated demo category with bounded retention and coordinated resets.</li>
+      <li>Everyone can read the live publishing and imported-content demonstrations.</li>
+      <li>The installed workflow currently operates through the staff-controlled publisher adapter.</li>
+      <li>Individual, expiring Demo Publisher credentials and coordinated resets are the next access layer.</li>
       <li>Full Discourse administration and connection secrets remain private.</li>
     </ul>
   </section>
