@@ -167,5 +167,13 @@ future Network, Migration, Identity, advanced-profile and adapter work.
 Local verification passes: seven static routes build, the Cloudflare dry run
 reads 17 generated files, and desktop visual inspection confirms the flagship,
 Alpha list, collection ordering, roadmap invitation and inaugural-product card.
-Production commit, push, deployment identity and public replay follow in the
-next checkpoint update.
+The chooser change is committed as
+`b8fc878` (`Make The Bridge the demo flagship`), pushed to `origin/main`, and
+deployed to `demo.discussionbridge.dev` as Cloudflare Worker version
+`75afe3b8-eca2-43d9-ab29-db7854003365`.
+
+Public replay proves: The Bridge is the flagship; the seven profiles appear in
+the approved order; `/hugo/` returns HTTPS 200; Hugo exposes no `Open demo`
+action and explicitly says no live destination is claimed; and the inaugural
+Astro + Starlight product remains linked and live. The later checkpoint-only
+commit does not change deployed page output.
