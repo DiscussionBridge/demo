@@ -177,3 +177,11 @@ the approved order; `/hugo/` returns HTTPS 200; Hugo exposes no `Open demo`
 action and explicitly says no live destination is claimed; and the inaugural
 Astro + Starlight product remains linked and live. The later checkpoint-only
 commit does not change deployed page output.
+
+### Queued homepage copy
+
+The homepage introduction now avoids implying a required visitor sequence. It
+invites visitors to explore The Bridge—our Discourse-powered flagship—alongside
+the inaugural DiscussionBridge for Astro + Starlight and every live platform
+profile. This wording is committed for the next demo publication and is not a
+standalone deployment request.
