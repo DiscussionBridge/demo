@@ -196,7 +196,7 @@ the undeployed Hugo and Statamic destinations remain explicitly planned.
 
 The shared Statamic demo layout independently supplies one eight-item
 **Statamic Demos** menu on all eight live Flat/DB pages. It links Simple, Full,
-Publishing to The Bridge, and From The Bridge for Flat, followed by the same
+Publishing through The Bridge, and From The Bridge for Flat, followed by the same
 four destinations for DB. The links are absolute so either profile can expose
 the complete collection.
 
@@ -211,9 +211,14 @@ The live Flat and DB home templates now replace the stock “Welcome to your new
 Statamic site” heading with the actual profile title under the label
 **DiscussionBridge for Statamic**. The identical installed layout and home
 template SHA-256 identities are respectively
-`5caf5842648858efc3d5a6e9498cde78a9a4e7c15bc424e4a8b27569a7654414`
+`a860bfb63ad60e883feb326afe1b70cf8693435e03d9b5e8119006a6d659bb13`
 and `0d1fef8fce5ab7e3e7dd60156e52d1d3698809ef7d180199992203c2ca0161cf`.
 The focused rollback package is
 `/var/backups/discussionbridge/statamic-presentation-pre-eight-menu-20260831`;
 its `SHA256SUMS` file hashes to
 `000c30c587fda2e4ccad8bd7feb032dfcee38431665d9fe46da967ae3335aa8a`.
+The menu uses the established **Publishing through The Bridge** wording on
+both profiles. Its focused pre-label-change rollback package is
+`/var/backups/discussionbridge/statamic-layout-pre-through-label-20260831`;
+that package's `SHA256SUMS` identity is
+`67a318c4bed4f592f1d8028d4158ffa635b5adc682cd17182a107a6d0ba359e4`.
