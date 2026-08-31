@@ -197,3 +197,10 @@ the undeployed Hugo and Statamic destinations remain explicitly planned.
 The shared Statamic demo layout independently supplies the same four-item
 **Statamic Demos** menu on all eight live Flat/DB pages: Simple, Full,
 Publishing to The Bridge, and From The Bridge for each profile.
+
+The chooser change is committed and pushed as `5eff2d5` (`Add cross-platform
+SSG demo collection`) and deployed to `demo.discussionbridge.dev` as Cloudflare
+Worker version `badf9ca3-0aa8-4027-a0f3-0efaa6fc3b31`. The production replay
+returned HTTPS 200 for all eight chooser routes and confirmed the shared
+WordPress → SSG → The Bridge navigation order. The SSG page exposes only the
+live Astro link; Hugo and Statamic remain visibly planned.
