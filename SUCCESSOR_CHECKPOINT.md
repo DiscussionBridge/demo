@@ -185,3 +185,15 @@ invites visitors to explore The Bridge—our Discourse-powered flagship—alongs
 the inaugural DiscussionBridge for Astro + Starlight and every live platform
 profile. This wording is committed for the next demo publication and is not a
 standalone deployment request.
+
+## SSG collection and Statamic navigation — 2026-08-31
+
+The shared chooser navigation now includes **SSG** between WordPress and The
+Bridge. It is intentionally a cross-platform capability collection rather than
+a product named Statamic SSG. `/ssg/` groups the live Astro + Starlight static
+foundation with planned Hugo and Statamic SSG profiles. Only Astro is linked;
+the undeployed Hugo and Statamic destinations remain explicitly planned.
+
+The shared Statamic demo layout independently supplies the same four-item
+**Statamic Demos** menu on all eight live Flat/DB pages: Simple, Full,
+Publishing to The Bridge, and From The Bridge for each profile.

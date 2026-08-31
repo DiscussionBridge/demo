@@ -148,6 +148,35 @@ export const statamicDemos: Demo[] = [
   },
 ];
 
+export const ssgDemos: Demo[] = [
+  {
+    title: "Astro + Starlight",
+    description:
+      "The live static-site foundation: generated Astro content with stable discussion identity and optional Bridge-enhanced interaction.",
+    origin: "astrostarlight.demo.discussionbridge.dev",
+    state: "Inaugural product",
+    href: "https://astrostarlight.demo.discussionbridge.dev/",
+    discussionHref: "https://forum.discussionbridge.dev/c/discussionbridge-for-astro/5",
+    note: "Live today. Its static build remains independent of browser credentials and can work with standard Discourse or The Bridge.",
+  },
+  {
+    title: "Hugo",
+    description:
+      "A late-Alpha profile for build-time publishing, durable identity across rebuilds, and live Discourse presentation.",
+    origin: "hugo.demo.discussionbridge.dev",
+    state: "Late Alpha",
+    note: "Planned before the Beta feature lock. No live destination is claimed yet.",
+  },
+  {
+    title: "Statamic SSG",
+    description:
+      "An advanced Statamic profile for generated output, build-time discussion resolution, and durable identity across static builds.",
+    origin: "statamic-ssg.demo.discussionbridge.dev",
+    state: "Future edition",
+    note: "Planned after the Flat and DB profiles stabilize. No live destination is claimed yet.",
+  },
+];
+
 export const discourseDemos: Demo[] = [flagship];
 
 export const collections = [
@@ -185,6 +214,13 @@ export const collections = [
     href: "/wordpress/",
     count: "1 initial demonstration",
     state: "Live",
+  },
+  {
+    title: "SSG",
+    description: "Static-generation profiles spanning Astro, Hugo, and Statamic without turning SSG into a separate adapter.",
+    href: "/ssg/",
+    count: "1 live foundation · 2 planned profiles",
+    state: "Astro live · Hugo and Statamic planned",
   },
   {
     title: "The Bridge",

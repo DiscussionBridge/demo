@@ -29,12 +29,15 @@ The public hierarchy is:
 - `/hugo/` — planned late-Alpha profile with no false live destination;
 - `/statamic/` — independent DB and Flat profiles plus future themed editions;
 - `/wordpress/` — stock WordPress demonstration collection;
+- `/ssg/` — static-generation profiles spanning Astro, Hugo, and Statamic;
 - `/discourse/` — The Bridge, the flagship live stock Discourse publishing
   forum with controlled operation.
 
 Existing Astro destinations plus the stock WordPress, Ghost, Statamic Flat,
 Statamic DB, and The Bridge demos are live. Hugo is included in Alpha but is
 explicitly labeled late Alpha and remains unlinked until deployed.
+The SSG collection links the live Astro + Starlight foundation while labeling
+Hugo and Statamic SSG as planned without presenting either as a live destination.
 Undeployed platform origins are shown as planned and are not linked as though
 they already exist. The agreed
 hands-on forum hostname is `bridge.demo.discussionbridge.dev`; its short public
