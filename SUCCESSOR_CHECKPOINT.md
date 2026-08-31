@@ -194,9 +194,11 @@ a product named Statamic SSG. `/ssg/` groups the live Astro + Starlight static
 foundation with planned Hugo and Statamic SSG profiles. Only Astro is linked;
 the undeployed Hugo and Statamic destinations remain explicitly planned.
 
-The shared Statamic demo layout independently supplies the same four-item
-**Statamic Demos** menu on all eight live Flat/DB pages: Simple, Full,
-Publishing to The Bridge, and From The Bridge for each profile.
+The shared Statamic demo layout independently supplies one eight-item
+**Statamic Demos** menu on all eight live Flat/DB pages. It links Simple, Full,
+Publishing to The Bridge, and From The Bridge for Flat, followed by the same
+four destinations for DB. The links are absolute so either profile can expose
+the complete collection.
 
 The chooser change is committed and pushed as `5eff2d5` (`Add cross-platform
 SSG demo collection`) and deployed to `demo.discussionbridge.dev` as Cloudflare
@@ -204,3 +206,14 @@ Worker version `badf9ca3-0aa8-4027-a0f3-0efaa6fc3b31`. The production replay
 returned HTTPS 200 for all eight chooser routes and confirmed the shared
 WordPress → SSG → The Bridge navigation order. The SSG page exposes only the
 live Astro link; Hugo and Statamic remain visibly planned.
+
+The live Flat and DB home templates now replace the stock “Welcome to your new
+Statamic site” heading with the actual profile title under the label
+**DiscussionBridge for Statamic**. The identical installed layout and home
+template SHA-256 identities are respectively
+`5caf5842648858efc3d5a6e9498cde78a9a4e7c15bc424e4a8b27569a7654414`
+and `0d1fef8fce5ab7e3e7dd60156e52d1d3698809ef7d180199992203c2ca0161cf`.
+The focused rollback package is
+`/var/backups/discussionbridge/statamic-presentation-pre-eight-menu-20260831`;
+its `SHA256SUMS` file hashes to
+`000c30c587fda2e4ccad8bd7feb032dfcee38431665d9fe46da967ae3335aa8a`.
