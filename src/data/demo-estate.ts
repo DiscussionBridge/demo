@@ -268,10 +268,10 @@ export const collections = [
   },
   {
     title: "Hugo",
-    description: "The late-Alpha static publishing profile planned before the Beta feature lock.",
+    description: "A live static publishing profile proving Simple, Full, fullInteractive, and both Bridge directions.",
     href: "/hugo/",
-    count: "1 planned demonstration",
-    state: "Late Alpha",
+    count: "Live platform profile",
+    state: "Live",
   },
   {
     title: "Statamic",
@@ -291,14 +291,14 @@ export const collections = [
     title: "SSG",
     description: "Static-generation profiles spanning Astro, Hugo, and Statamic without turning SSG into a separate adapter.",
     href: "/ssg/",
-    count: "2 live profiles · 1 planned profile",
-    state: "Astro and Statamic live · Hugo late Alpha",
+    count: "3 live profiles",
+    state: "Astro · Hugo · Statamic live",
   },
   {
     title: "The Bridge",
-    description: "The flagship: a controlled, hands-on Discourse-as-Publisher demonstration.",
+    description: "The flagship and many-to-many matrix: shared conversations across seven live platform profiles.",
     href: "/discourse/",
-    count: "1 interactive demonstration",
+    count: "3 shared discussions · 21 live presentations",
     state: "Flagship · Live",
   },
 ];
