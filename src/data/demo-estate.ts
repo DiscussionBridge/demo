@@ -158,8 +158,10 @@ export const hugoDemos: Demo[] = [
     description:
       "A stock Hugo publication proving build-time identity, idempotent retry, and durable live Discourse presentation.",
     origin: "hugo.demo.discussionbridge.dev",
-    state: "Late Alpha",
-    note: "Planned for the end of Alpha before the Beta feature lock. No live destination is claimed yet.",
+    state: "Live",
+    href: "https://hugo.demo.discussionbridge.dev/",
+    discussionHref: "https://bridge.demo.discussionbridge.dev/t/hugo-publishing-through-the-bridge/50",
+    note: "Live on stock Hugo and Ananke with generated Simple comments, plugin-free Full comments, and both Bridge directions.",
   },
 ];
 
@@ -227,10 +229,12 @@ export const ssgDemos: Demo[] = [
   {
     title: "Hugo",
     description:
-      "A late-Alpha profile for build-time publishing, durable identity across rebuilds, and live Discourse presentation.",
+      "A live profile for build-time publishing, durable identity across rebuilds, and Discourse presentation.",
     origin: "hugo.demo.discussionbridge.dev",
-    state: "Late Alpha",
-    note: "Planned before the Beta feature lock. No live destination is claimed yet.",
+    state: "Live",
+    href: "https://hugo.demo.discussionbridge.dev/",
+    discussionHref: "https://bridge.demo.discussionbridge.dev/t/hugo-publishing-through-the-bridge/50",
+    note: "Live on stock Hugo with static Simple capture, plugin-free Full comments, and receiver-backed To/From profiles.",
   },
   {
     title: "Statamic SSG",

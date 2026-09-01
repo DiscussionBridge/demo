@@ -26,7 +26,7 @@ The public hierarchy is:
 - `/astro/` — inaugural Astro + Starlight product, Plain Astro reference, and
   stock Starlight control;
 - `/ghost/` — stock Ghost and future themed edition;
-- `/hugo/` — planned late-Alpha profile with no false live destination;
+- `/hugo/` — live stock Hugo profile with all four discussion modes;
 - `/statamic/` — independent DB, Flat, and SSG profiles plus future themed
   editions;
 - `/wordpress/` — stock WordPress demonstration collection;
@@ -34,11 +34,9 @@ The public hierarchy is:
 - `/discourse/` — The Bridge, the flagship live stock Discourse publishing
   forum with controlled operation.
 
-Existing Astro destinations plus the stock WordPress, Ghost, Statamic Flat,
-Statamic DB, Statamic SSG, and The Bridge demos are live. Hugo is included in
-Alpha but is explicitly labeled late Alpha and remains unlinked until deployed.
-The SSG collection links the live Astro + Starlight and Statamic SSG profiles
-while labeling Hugo as planned without presenting it as a live destination.
+Existing Astro destinations plus the stock WordPress, Ghost, Hugo, Statamic
+Flat, Statamic DB, Statamic SSG, and The Bridge demos are live. The SSG
+collection links the live Astro + Starlight, Hugo, and Statamic SSG profiles.
 Undeployed platform origins are shown as planned and are not linked as though
 they already exist. The agreed
 hands-on forum hostname is `bridge.demo.discussionbridge.dev`; its short public
