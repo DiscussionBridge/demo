@@ -241,3 +241,19 @@ Cloudflare Web Analytics currently adds one separately managed beacon script to
 live HTTP responses. Removing exactly that edge-injected script yields bytes
 identical to the committed generated HTML; the beacon is not part of the source
 or uploaded asset bundle.
+
+## Ghost and WordPress four-mode collections — 2026-08-31
+
+The Ghost and WordPress collection pages now expose four live destinations
+each: Simple Comments, Full Comments, Publishing through The Bridge, and From
+The Bridge. Their discussion actions point to exact live Bridge topics rather
+than the former sandbox forum. Ghost Simple and Full use topics 47 and 48;
+WordPress Simple and Full use topics 45 and 46. Existing To/From proofs remain
+topics 27/25 for Ghost and 28/30 for WordPress.
+
+Chooser commit `c508d55e4986997a1f27b397a9e1a4a7ffa310c4`, tree
+`b96964bd8d7e218fa1bcf26e6364c2790b2a2560`, is pushed to `origin/main` and
+deployed as Cloudflare Worker version
+`847278c4-8b8a-4299-8053-a6fdf8e00b8c`. The build produced all eight chooser
+routes and the Wrangler dry run passed before publication. This repository has
+no test script.
