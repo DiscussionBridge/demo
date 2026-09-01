@@ -272,3 +272,18 @@ Chooser source commit `c08b261d31a0cd9549da727f0169ad2e160318cd`, tree
 deployed as Cloudflare Worker version
 `dc89d911-2f31-4972-bcb4-d8eaef4bc6f7`. The production build generated all
 eight chooser routes. The Hugo publishing action points to Bridge topic 50.
+
+## Publisher matrix and flagship action labels — 2026-09-01
+
+The `/discourse/` collection now presents three universal shared discussions
+across seven live profiles plus the first heterogeneous mixed-mode examples.
+Chooser commit `9e723adfbe99d2678cce278d697228a8f56b7b59` is deployed as
+Cloudflare Worker version `c8e9dedd-41bc-4923-8b81-551730fd9164`.
+
+The flagship card previously used the generic actions **Open demo** and
+**Discussion**, which did not distinguish the live forum home from its
+explanatory topic. Commit `125477c` changes only that card to **Enter The
+Bridge** and **About The Bridge**, and replaces the stale `stock Discourse`
+description with `reference DiscussionBridge publishing environment`.
+Cloudflare Worker version `403fd1e9-9d0d-4943-8d21-6c57f728a36d` is live.
+Public replay returned HTTPS 200 with both new labels and neither stale phrase.
