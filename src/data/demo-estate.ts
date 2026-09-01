@@ -131,6 +131,17 @@ export const statamicDemos: Demo[] = [
     note: "Both directions are live through the shared addon while content remains honestly file-backed.",
   },
   {
+    title: "Statamic SSG",
+    description:
+      "A generated Statamic profile proving the same addon across build-time snapshots, live comments, stable publishing identity, and forum-owned content.",
+    origin: "statamic-ssg.demo.discussionbridge.dev",
+    state: "Live",
+    href: "https://statamic-ssg.demo.discussionbridge.dev/",
+    discussionHref:
+      "https://bridge.demo.discussionbridge.dev/t/statamic-ssg-publishing-through-the-bridge/43",
+    note: "Live as seven generated HTML files with no deployed PHP runtime, Statamic control panel, or receiver credential.",
+  },
+  {
     title: "Statamic DB Themed Edition",
     description:
       "A future DiscussionBridge-designed Statamic experience exercised against the database-backed profile.",
@@ -172,8 +183,11 @@ export const ssgDemos: Demo[] = [
     description:
       "An advanced Statamic profile for generated output, build-time discussion resolution, and durable identity across static builds.",
     origin: "statamic-ssg.demo.discussionbridge.dev",
-    state: "Future edition",
-    note: "Planned after the Flat and DB profiles stabilize. No live destination is claimed yet.",
+    state: "Live",
+    href: "https://statamic-ssg.demo.discussionbridge.dev/",
+    discussionHref:
+      "https://bridge.demo.discussionbridge.dev/t/statamic-ssg-publishing-through-the-bridge/43",
+    note: "Live through the shared Statamic addon: build-time Simple and From snapshots plus live Full and mapped discussion frames.",
   },
 ];
 
@@ -203,10 +217,10 @@ export const collections = [
   },
   {
     title: "Statamic",
-    description: "DB and Flat profiles proven separately, then extended with matching themed editions.",
+    description: "DB, Flat, and SSG profiles proven separately through one shared addon, then extended with matching themed editions.",
     href: "/statamic/",
-    count: "4 demonstrations",
-    state: "Live · themed editions planned",
+    count: "5 demonstrations",
+    state: "3 live · themed editions planned",
   },
   {
     title: "WordPress",
@@ -219,8 +233,8 @@ export const collections = [
     title: "SSG",
     description: "Static-generation profiles spanning Astro, Hugo, and Statamic without turning SSG into a separate adapter.",
     href: "/ssg/",
-    count: "1 live foundation · 2 planned profiles",
-    state: "Astro live · Hugo and Statamic planned",
+    count: "2 live profiles · 1 planned profile",
+    state: "Astro and Statamic live · Hugo late Alpha",
   },
   {
     title: "The Bridge",

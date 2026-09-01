@@ -4,11 +4,11 @@ import { statamicDemos } from "../../data/demo-estate";
 import DemoLayout from "../../layouts/DemoLayout.astro";
 ---
 
-<DemoLayout title="Statamic demos · DiscussionBridge" description="Independent Statamic Flat and DB demonstrations with future themed editions." activePath="/statamic/">
+<DemoLayout title="Statamic demos · DiscussionBridge" description="Independent Statamic Flat, DB, and SSG demonstrations with future themed editions." activePath="/statamic/">
   <section class="page-intro">
-    <p class="kicker">Two required profiles</p>
-    <h1>One Statamic adapter. Two honest proofs.</h1>
-    <p>Flat and DB share adapter code but remain separate product profiles with distinct content stores, connections, discussions, presentation evidence, and future themed editions.</p>
+    <p class="kicker">Three live profiles</p>
+    <h1>One Statamic addon. Three honest proofs.</h1>
+    <p>Flat, DB, and SSG share addon code but remain separate product profiles with distinct content stores, connections, discussions, persistence, deployment boundaries, and presentation evidence.</p>
   </section>
   <div class="demo-grid">{statamicDemos.map((demo) => <DemoCard demo={demo} />)}</div>
 </DemoLayout>
