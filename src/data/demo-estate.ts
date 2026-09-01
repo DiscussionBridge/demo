@@ -14,7 +14,9 @@ export type Demo = {
   origin: string;
   state: DemoState;
   href?: string;
+  hrefLabel?: string;
   discussionHref?: string;
+  discussionLabel?: string;
   note?: string;
 };
 
@@ -25,9 +27,11 @@ export const flagship: Demo = {
   origin: "bridge.demo.discussionbridge.dev",
   state: "Flagship",
   href: "https://bridge.demo.discussionbridge.dev/",
+  hrefLabel: "Enter The Bridge",
   discussionHref:
     "https://bridge.demo.discussionbridge.dev/t/the-bridge-publishing-discourse-content-through-discussionbridge/10",
-  note: "Live today as a stock Discourse publishing environment. Controlled demo-user access and coordinated resets remain planned.",
+  discussionLabel: "About The Bridge",
+  note: "Live today as the reference DiscussionBridge publishing environment. Controlled demo-user access and coordinated resets remain planned.",
 };
 
 export const inaugural: Demo = {

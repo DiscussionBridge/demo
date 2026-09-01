@@ -16,12 +16,18 @@ const stateClass = demo.state.toLowerCase().replaceAll(" ", "-");
   <div class="actions">
     {
       demo.href ? (
-        <a class="button" href={demo.href}>Open demo</a>
+        <a class="button" href={demo.href}>{demo.hrefLabel ?? "Open demo"}</a>
       ) : (
         <span class="button disabled" aria-disabled="true">In development</span>
       )
     }
-    {demo.discussionHref && <a class="text-link" href={demo.discussionHref}>Discussion</a>}
+    {
+      demo.discussionHref && (
+        <a class="text-link" href={demo.discussionHref}>
+          {demo.discussionLabel ?? "Discussion"}
+        </a>
+      )
+    }
   </div>
 </article>
 
