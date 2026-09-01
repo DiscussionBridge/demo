@@ -222,3 +222,22 @@ both profiles. Its focused pre-label-change rollback package is
 `/var/backups/discussionbridge/statamic-layout-pre-through-label-20260831`;
 that package's `SHA256SUMS` identity is
 `67a318c4bed4f592f1d8028d4158ffa635b5adc682cd17182a107a6d0ba359e4`.
+
+## Statamic SSG live-state promotion — 2026-08-31
+
+The later Statamic SSG implementation supersedes only the current-state claims
+above that described that profile as planned. The dated planning and deployment
+history remains intact. Current chooser source commit
+`abd9bf67d3ecffee7282de1be6cb8b9b1d60b8fc`, tree
+`552533182f83f2dd844a0852ffc52940da368f38`, is deployed as Cloudflare Worker
+version `1d7a9c74-de1e-4983-b3e9-4de115edb7ea`. The public apex, `/ssg/`, and
+`/statamic/` now identify Statamic SSG as live and link
+`https://statamic-ssg.demo.discussionbridge.dev/`. The current navigation labels
+are `04 Statamic DB | Statamic Flat` and `05 Statamic SSG`; Hugo remains planned
+and unlinked.
+
+The Statamic SSG Worker's uploaded asset bundle is immutable generated output.
+Cloudflare Web Analytics currently adds one separately managed beacon script to
+live HTTP responses. Removing exactly that edge-injected script yields bytes
+identical to the committed generated HTML; the beacon is not part of the source
+or uploaded asset bundle.
