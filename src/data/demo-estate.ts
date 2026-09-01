@@ -23,15 +23,12 @@ export type Demo = {
 export const flagship: Demo = {
   title: "The Bridge",
   description:
-    "The Discourse-powered flagship and reference experience where the complete DiscussionBridge content workflow comes together.",
+    "DiscussionBridge’s Discourse-powered flagship: the live reference forum where connected platforms publish, receive, and share authoritative discussions through the same plugin available to operators.",
   origin: "bridge.demo.discussionbridge.dev",
   state: "Flagship",
   href: "https://bridge.demo.discussionbridge.dev/",
   hrefLabel: "Enter The Bridge",
-  discussionHref:
-    "https://bridge.demo.discussionbridge.dev/t/the-bridge-publishing-discourse-content-through-discussionbridge/10",
-  discussionLabel: "About The Bridge",
-  note: "Live today as the reference DiscussionBridge publishing environment. Controlled demo-user access and coordinated resets remain planned.",
+  note: "Live today as the flagship DiscussionBridge environment. The community forum, build sandbox, and pre-production forum remain separate. Controlled demo-user access and coordinated resets remain planned.",
 };
 
 export const inaugural: Demo = {

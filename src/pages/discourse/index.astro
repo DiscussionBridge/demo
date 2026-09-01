@@ -42,13 +42,19 @@ const mixedExamples = [
 ];
 ---
 
-<DemoLayout title="The Bridge · DiscussionBridge demos" description="The live stock Discourse publishing forum at bridge.demo.discussionbridge.dev." activePath="/discourse/">
+<DemoLayout title="The Bridge · DiscussionBridge demos" description="DiscussionBridge’s Discourse-powered flagship and live reference forum for connected publishing and authoritative discussion." activePath="/discourse/">
   <section class="page-intro">
     <p class="kicker">DiscussionBridge flagship</p>
     <h1>The Bridge</h1>
-    <p>The Discourse-powered flagship and reference experience—separate from the community, build sandbox, and pre-production forum—with real content flowing in both directions through the same DiscussionBridge plugin available to operators.</p>
+    <p>DiscussionBridge’s Discourse-powered flagship and live reference forum—where connected platforms publish, receive, and share authoritative discussions through the same plugin available to operators.</p>
   </section>
   <div class="demo-grid">{discourseDemos.map((demo) => <DemoCard demo={demo} />)}</div>
+  <section class="bridge-identity" id="about-the-bridge">
+    <p class="kicker">What The Bridge is</p>
+    <h2>The flagship forum—not a special-purpose substitute.</h2>
+    <p>The Bridge runs the downloadable DiscussionBridge plugin that forum operators use. It receives content from connected platforms, publishes forum-owned content outward, preserves Discourse as the authoritative home of each discussion, and demonstrates how one conversation can appear through different presentation modes across the platform estate.</p>
+    <p>It is deliberately separate from the DiscussionBridge community forum, the build sandbox, and the development/pre-production forum. The topics below are working demonstrations; none serves as the product’s About page.</p>
+  </section>
   <section class="matrix-intro">
     <p class="kicker">Many-to-many demonstration</p>
     <h2>Three discussions. Seven platform profiles. Twenty-one live presentations.</h2>
@@ -102,6 +108,9 @@ const mixedExamples = [
   .access-model ul { margin: 20px 0 0; padding-left: 1.2rem; color: var(--muted); }
   .access-model li + li { margin-top: 8px; }
   .matrix-intro { max-width: 920px; margin-top: 64px; }
+  .bridge-identity { max-width: 920px; margin-top: 54px; padding: clamp(24px, 5vw, 44px); border: 1px solid var(--line); border-radius: 22px; background: var(--panel); }
+  .bridge-identity h2 { margin: 0; font-family: var(--display-font); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 500; line-height: 1.04; }
+  .bridge-identity > p:last-child, .bridge-identity > p:nth-last-child(2) { max-width: 780px; color: var(--muted); font-size: 1.08rem; }
   .matrix-intro h2 { margin: 0; font-family: var(--display-font); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 500; line-height: 1.04; }
   .matrix-intro > p:last-child { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
   .conversation-stack { display: grid; gap: 24px; margin-top: 28px; }
