@@ -257,3 +257,18 @@ deployed as Cloudflare Worker version
 `847278c4-8b8a-4299-8053-a6fdf8e00b8c`. The build produced all eight chooser
 routes and the Wrangler dry run passed before publication. This repository has
 no test script.
+
+## Hugo live-state promotion — 2026-08-31
+
+The Hugo profile is now live and supersedes only the earlier current-state
+claims that labeled it planned. Its stock Hugo/Ananke destination is
+`https://hugo.demo.discussionbridge.dev/` and exposes generated Simple
+comments, plugin-free Full comments, publishing through The Bridge, and From
+The Bridge. The SSG collection now links Astro + Starlight, Hugo, and Statamic
+SSG as three independently live generated-site profiles.
+
+Chooser source commit `c08b261d31a0cd9549da727f0169ad2e160318cd`, tree
+`e6d5dfe4069a5cce5f9d73dfe786e6864adb9a9b`, is pushed to `origin/main` and
+deployed as Cloudflare Worker version
+`dc89d911-2f31-4972-bcb4-d8eaef4bc6f7`. The production build generated all
+eight chooser routes. The Hugo publishing action points to Bridge topic 50.
