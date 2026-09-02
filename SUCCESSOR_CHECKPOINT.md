@@ -296,3 +296,14 @@ planned and does not masquerade as a live account. Source commit `749e1cf` is
 pushed to `origin/main`; the eight-route build passed and Cloudflare Worker
 version `d9a19ce1-d5ff-4016-99a1-6a700c4506f0` is live. Public HTTP replay
 returned 200 and contained all six live destinations plus the planned X label.
+
+## Sandbox-link removal — 2026-09-02
+
+The Statamic DB and Statamic Flat chooser cards retained stale **Discussion**
+links to historical topics on `sandbox-forum.discussionbridge.dev`. The sandbox
+is installation/test evidence, not a public Alpha profile or release deployment.
+Commit `d964c23` removes only those two links; both live demo destinations and
+their current status text remain unchanged. The eight-route build and Wrangler
+4.123.0 dry run passed. Cloudflare Worker version
+`6832ade1-5183-42c9-83b0-58c526052274` is live. Public `/statamic/` returns 200,
+contains both profiles, and contains zero sandbox-hostname references.
