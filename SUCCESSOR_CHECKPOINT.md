@@ -287,3 +287,12 @@ Bridge** and **About The Bridge**, and replaces the stale `stock Discourse`
 description with `reference DiscussionBridge publishing environment`.
 Cloudflare Worker version `403fd1e9-9d0d-4943-8d21-6c57f728a36d` is live.
 Public replay returned HTTPS 200 with both new labels and neither stale phrase.
+
+## Community and social footer — 2026-09-01
+
+The demo hub footer now links the DiscussionBridge community forum, Bluesky,
+public Discord invite, Mastodon, Reddit and YouTube. X is visibly labeled as
+planned and does not masquerade as a live account. Source commit `749e1cf` is
+pushed to `origin/main`; the eight-route build passed and Cloudflare Worker
+version `d9a19ce1-d5ff-4016-99a1-6a700c4506f0` is live. Public HTTP replay
+returned 200 and contained all six live destinations plus the planned X label.
