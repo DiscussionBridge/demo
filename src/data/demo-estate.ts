@@ -6,7 +6,7 @@ export type DemoState =
   | "Control"
   | "Building for Alpha"
   | "Late Alpha"
-  | "Future edition";
+  | "Planned";
 
 export type Demo = {
   title: string;
@@ -62,6 +62,14 @@ export const astroDemos: Demo[] = [
     state: "Control",
     href: "https://stockstarlight.demo.discussionbridge.dev/",
     note: "A comparison control, not a Bridge-enabled publishing demo.",
+  },
+  {
+    title: "Astro Themed Edition",
+    description:
+      "A full-featured native Astro theme that can launch as a polished placeholder, graduate through private preview, and become the finished public site without a rebuild from another theme.",
+    origin: "Naming and destination pending",
+    state: "Planned",
+    note: "Useful as an Astro theme on its own, with first-class DiscussionBridge publishing and discussion features available by choice.",
   },
 ];
 
@@ -146,10 +154,10 @@ export const ghostDemos: Demo[] = [
   {
     title: "Ghost Themed Edition",
     description:
-      "A future first-party DiscussionBridge theme showing what a polished Ghost publishing experience can become.",
-    origin: "ghost-themed.demo.discussionbridge.dev",
-    state: "Future edition",
-    note: "Begins after the stock workflow is established.",
+      "A distinctly crafted Ghost theme with a polished build placeholder, private preview path, complete publishing layouts, and a finished live mode.",
+    origin: "Naming and destination pending",
+    state: "Planned",
+    note: "The theme remains useful without DiscussionBridge; connected publishing, comments, and forum-owned content become first-class capabilities when enabled.",
   },
 ];
 
@@ -163,6 +171,14 @@ export const hugoDemos: Demo[] = [
     href: "https://hugo.demo.discussionbridge.dev/",
     discussionHref: "https://bridge.demo.discussionbridge.dev/t/hugo-publishing-through-the-bridge/50",
     note: "Live on stock Hugo and Ananke with generated Simple comments, plugin-free Full comments, and both Bridge directions.",
+  },
+  {
+    title: "Hugo Themed Edition",
+    description:
+      "A purpose-built Hugo theme spanning a polished build placeholder, private preview, documentation and publishing layouts, and the complete live site.",
+    origin: "Naming and destination pending",
+    state: "Planned",
+    note: "It will be a strong Hugo product independently, with optional first-class DiscussionBridge capabilities rather than adapter-shaped presentation.",
   },
 ];
 
@@ -201,18 +217,18 @@ export const statamicDemos: Demo[] = [
   {
     title: "Statamic DB Themed Edition",
     description:
-      "A future DiscussionBridge-designed Statamic experience exercised against the database-backed profile.",
-    origin: "statamic-db-themed.demo.discussionbridge.dev",
-    state: "Future edition",
-    note: "Begins after the stock DB workflow is established.",
+      "A full Statamic starter experience that moves from polished build placeholder to private preview and finished live publishing against the database-backed profile.",
+    origin: "Naming and destination pending",
+    state: "Planned",
+    note: "The themed starter remains separate from the addon: each is useful alone, and together they provide the intended connected experience.",
   },
   {
     title: "Statamic Flat Themed Edition",
     description:
-      "The same future design language exercised independently against file-backed Statamic content.",
-    origin: "statamic-flat-themed.demo.discussionbridge.dev",
-    state: "Future edition",
-    note: "Begins after the stock Flat workflow is established.",
+      "The same complete starter and design system exercised honestly against file-backed Statamic content.",
+    origin: "Naming and destination pending",
+    state: "Planned",
+    note: "Build, preview, and live modes stay native to Statamic while optional DiscussionBridge features remain independently installable.",
   },
 ];
 
@@ -250,15 +266,34 @@ export const ssgDemos: Demo[] = [
   },
 ];
 
-export const discourseDemos: Demo[] = [flagship];
+export const discourseDemos: Demo[] = [
+  flagship,
+  {
+    title: "Purpose-built Discourse Theme",
+    description:
+      "A possible first-party theme for The Bridge that turns the proven stock forum workflow into a distinctive flagship experience without changing Discourse ownership or plugin boundaries.",
+    origin: "Naming and destination pending",
+    state: "Planned",
+    note: "The stock flagship remains the Alpha compatibility proof. Naming, adoption by The Bridge, and the final themed scope will be decided later.",
+  },
+];
+
+export const plannedThemeEditions: Demo[] = [
+  astroDemos.at(-1)!,
+  ghostDemos.at(-1)!,
+  hugoDemos.at(-1)!,
+  statamicDemos.at(-2)!,
+  statamicDemos.at(-1)!,
+  discourseDemos.at(-1)!,
+];
 
 export const collections = [
   {
     title: "Astro",
-    description: "The inaugural Astro + Starlight product, a plain Astro reference, and the stock Starlight control.",
+    description: "The inaugural Astro + Starlight product, a plain Astro reference, the stock Starlight control, and a planned full themed edition.",
     href: "/astro/",
-    count: "3 demonstrations",
-    state: "Live · Alpha refresh",
+    count: "3 live/control profiles · themed edition planned",
+    state: "Live · themed edition planned",
   },
   {
     title: "Ghost",
@@ -269,10 +304,10 @@ export const collections = [
   },
   {
     title: "Hugo",
-    description: "A live static publishing profile proving Simple, Full, fullInteractive, and both Bridge directions.",
+    description: "A live static publishing profile plus a planned native themed edition spanning build, preview, and live modes.",
     href: "/hugo/",
-    count: "Live platform profile",
-    state: "Live",
+    count: "1 live profile · themed edition planned",
+    state: "Live · themed edition planned",
   },
   {
     title: "Statamic",
@@ -297,9 +332,9 @@ export const collections = [
   },
   {
     title: "The Bridge",
-    description: "The flagship and many-to-many matrix: shared conversations across seven live platform profiles.",
+    description: "The stock flagship and many-to-many matrix, with a possible purpose-built Discourse theme planned as a distinct next expression.",
     href: "/discourse/",
-    count: "3 shared discussions · 21 live presentations",
-    state: "Flagship · Live",
+    count: "3 shared discussions · 21 live presentations · theme planned",
+    state: "Flagship · theme planned",
   },
 ];

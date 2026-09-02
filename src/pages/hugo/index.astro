@@ -4,11 +4,11 @@ import { hugoDemos } from "../../data/demo-estate";
 import DemoLayout from "../../layouts/DemoLayout.astro";
 ---
 
-<DemoLayout title="Hugo demo · DiscussionBridge" description="The live stock Hugo publishing profile for DiscussionBridge." activePath="/hugo/">
+<DemoLayout title="Hugo demos · DiscussionBridge" description="The live stock Hugo publishing profile and planned native themed edition for DiscussionBridge." activePath="/hugo/">
   <section class="page-intro">
     <p class="kicker">Live Alpha profile</p>
     <h1>Hugo builds the site. The discussion stays connected.</h1>
-    <p>The stock Hugo profile now proves generated Simple comments, plugin-free Full comments, stable receiver-backed publishing, and forum-owned content—all without placing credentials in the browser.</p>
+    <p>The stock Hugo profile proves generated Simple comments, plugin-free Full comments, stable receiver-backed publishing, and forum-owned content. A planned native theme will carry the same capability from polished build placeholder through private preview to a complete live site.</p>
   </section>
   <div class="demo-grid">{hugoDemos.map((demo) => <DemoCard demo={demo} />)}</div>
 </DemoLayout>
