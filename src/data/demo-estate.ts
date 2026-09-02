@@ -190,7 +190,6 @@ export const statamicDemos: Demo[] = [
     origin: "statamic-db.demo.discussionbridge.dev",
     state: "Live",
     href: "https://statamic-db.demo.discussionbridge.dev/",
-    discussionHref: "https://sandbox-forum.discussionbridge.dev/t/statamic-db-publishing-connected-to-discourse/27",
     note: "Both directions are live on an independent Eloquent-backed profile with its own connection and persistence.",
   },
   {
@@ -200,7 +199,6 @@ export const statamicDemos: Demo[] = [
     origin: "statamic-flat.demo.discussionbridge.dev",
     state: "Live",
     href: "https://statamic-flat.demo.discussionbridge.dev/",
-    discussionHref: "https://sandbox-forum.discussionbridge.dev/t/statamic-flat-publishing-connected-to-discourse/26",
     note: "Both directions are live through the shared addon while content remains honestly file-backed.",
   },
   {
