@@ -28,7 +28,7 @@ export const flagship: Demo = {
   state: "Flagship",
   href: "https://bridge.demo.discussionbridge.dev/",
   hrefLabel: "Enter The Bridge",
-  note: "Live today as the flagship DiscussionBridge environment. The community forum, build sandbox, and pre-production forum remain separate. Controlled demo-user access and coordinated resets remain planned.",
+  note: "Live today as the flagship DiscussionBridge environment. Controlled demo-user access and coordinated resets remain planned.",
 };
 
 export const inaugural: Demo = {
