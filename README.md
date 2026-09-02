@@ -21,8 +21,9 @@ implementations.
 
 The public hierarchy is:
 
-- `/` — master chooser with The Bridge as flagship and the seven-profile Alpha
-  path;
+- `/` — master chooser with The Bridge as flagship and seven showcase entries
+  representing eight independently configured Alpha profiles (Statamic DB and
+  Flat share one chooser entry);
 - `/astro/` — inaugural Astro + Starlight product, Plain Astro reference, and
   stock Starlight control;
 - `/ghost/` — stock Ghost and future themed edition;
