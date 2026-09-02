@@ -215,20 +215,12 @@ export const statamicDemos: Demo[] = [
     note: "Live as seven generated HTML files with no deployed PHP runtime, Statamic control panel, or receiver credential.",
   },
   {
-    title: "Statamic DB Themed Edition",
+    title: "Statamic Themed Edition",
     description:
-      "A full Statamic starter experience that moves from polished build placeholder to private preview and finished live publishing against the database-backed profile.",
+      "One full Statamic theme and starter that moves from polished build placeholder to private preview and finished live publishing across Flat, DB, and SSG profiles.",
     origin: "Naming and destination pending",
     state: "Planned",
-    note: "The themed starter remains separate from the addon: each is useful alone, and together they provide the intended connected experience.",
-  },
-  {
-    title: "Statamic Flat Themed Edition",
-    description:
-      "The same complete starter and design system exercised honestly against file-backed Statamic content.",
-    origin: "Naming and destination pending",
-    state: "Planned",
-    note: "Build, preview, and live modes stay native to Statamic while optional DiscussionBridge features remain independently installable.",
+    note: "The shared theme remains separate from the addon and is validated against file-backed, database-backed, and statically generated Statamic estates.",
   },
 ];
 
@@ -282,7 +274,6 @@ export const plannedThemeEditions: Demo[] = [
   astroDemos.at(-1)!,
   ghostDemos.at(-1)!,
   hugoDemos.at(-1)!,
-  statamicDemos.at(-2)!,
   statamicDemos.at(-1)!,
   discourseDemos.at(-1)!,
 ];
@@ -311,10 +302,10 @@ export const collections = [
   },
   {
     title: "Statamic",
-    description: "DB, Flat, and SSG profiles proven separately through one shared addon, then extended with matching themed editions.",
+    description: "DB, Flat, and SSG profiles proven separately through one shared addon and one shared planned themed edition.",
     href: "/statamic/",
-    count: "5 demonstrations",
-    state: "3 live · themed editions planned",
+    count: "3 live profiles · 1 themed edition planned",
+    state: "3 live · shared theme planned",
   },
   {
     title: "WordPress",
