@@ -8,6 +8,7 @@ const { title, description, activePath = "/" } = Astro.props as {
 };
 
 const navItems = [
+  { href: "https://discussionbridge.dev/", label: "Product site" },
   { href: "/", label: "All demos" },
   { href: "/astro/", label: "Astro" },
   { href: "/ghost/", label: "Ghost" },
@@ -49,7 +50,6 @@ const navItems = [
           <span class="brand-mark" aria-hidden="true">DB</span>
           <span><strong>DiscussionBridge</strong><small>Live demonstrations</small></span>
         </a>
-        <a class="product-link" href="https://discussionbridge.dev/">Product site</a>
       </div>
       <nav class="collection-nav" aria-label="Demo collections">
         <div>
@@ -81,7 +81,6 @@ const navItems = [
   .brand strong, .brand small { display: block; }
   .brand strong { font-family: var(--display-font); font-size: 1.3rem; }
   .brand small { color: #b9d0d2; font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; }
-  .product-link { color: #d7e8e8; font-size: 0.9rem; font-weight: 700; text-underline-offset: 0.25em; }
   .collection-nav { border-top: 1px solid rgb(255 255 255 / 10%); }
   .collection-nav > div { display: flex; overflow-x: auto; gap: 8px; padding-block: 11px; scrollbar-width: thin; }
   .collection-nav a { flex: 0 0 auto; padding: 7px 11px; border-radius: 8px; color: #c6d9da; font-size: 0.88rem; font-weight: 750; text-decoration: none; }
@@ -99,5 +98,5 @@ const navItems = [
   footer nav { display: flex; gap: 18px; }
   footer a { color: var(--accent-strong); font-weight: 700; text-underline-offset: 0.2em; }
   @media (max-width: 760px) { .demo-grid, .collection-grid { grid-template-columns: 1fr; } .footer-intro { align-items: flex-start; flex-direction: column; } }
-  @media (max-width: 520px) { .header-inner, .collection-nav > div, main, footer { width: min(100% - 28px, 1180px); } .header-inner { min-height: 84px; } .brand small, .product-link { display: none; } }
+  @media (max-width: 520px) { .header-inner, .collection-nav > div, main, footer { width: min(100% - 28px, 1180px); } .header-inner { min-height: 84px; } .brand small { display: none; } }
 </style>
