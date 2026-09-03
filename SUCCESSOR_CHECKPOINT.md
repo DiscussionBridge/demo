@@ -316,3 +316,8 @@ standalone header link was removed rather than duplicated. The eight-route build
 and Wrangler dry run passed. Source commit `cc670bb` is pushed to `origin/main`
 and deployed as Cloudflare Worker version
 `b5004826-4e0a-464b-872f-7f6582eb8ec5`.
+
+The first navigation label was subsequently shortened from `Product site` to
+`DiscussionBridge` while retaining the exact apex destination. `All demos`
+remains the distinct chooser-home action. This wording is intentionally easy to
+revisit after further human navigation testing.
