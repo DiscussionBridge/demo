@@ -1,6 +1,6 @@
 # DiscussionBridge Demo Chooser Handoff
 
-Updated: 2026-08-29
+Updated: 2026-09-03
 
 ## Authority and current boundary
 
@@ -307,3 +307,12 @@ their current status text remain unchanged. The eight-route build and Wrangler
 4.123.0 dry run passed. Cloudflare Worker version
 `6832ade1-5183-42c9-83b0-58c526052274` is live. Public `/statamic/` returns 200,
 contains both profiles, and contains zero sandbox-hostname references.
+
+## Product-site navigation promotion — 2026-09-03
+
+`Product site` is now the first item in the shared demo collection navigation,
+so it remains available on every chooser route and at narrow widths. The former
+standalone header link was removed rather than duplicated. The eight-route build
+and Wrangler dry run passed. Source commit `cc670bb` is pushed to `origin/main`
+and deployed as Cloudflare Worker version
+`b5004826-4e0a-464b-872f-7f6582eb8ec5`.
