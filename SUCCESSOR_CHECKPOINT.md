@@ -320,4 +320,6 @@ and deployed as Cloudflare Worker version
 The first navigation label was subsequently shortened from `Product site` to
 `DiscussionBridge` while retaining the exact apex destination. `All demos`
 remains the distinct chooser-home action. This wording is intentionally easy to
-revisit after further human navigation testing.
+revisit after further human navigation testing. Source commit `8e81ee1` is
+pushed to `origin/main` and deployed as Cloudflare Worker version
+`2a9a4b75-24af-46ce-9560-fdd548b00e95`.
