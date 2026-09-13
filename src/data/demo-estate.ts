@@ -91,7 +91,7 @@ export const wordpressDemos: Demo[] = [
     state: "Live",
     href: "https://wordpress.demo.discussionbridge.dev/wordpress-full-comments/",
     discussionHref: "https://bridge.demo.discussionbridge.dev/t/wordpress-full-comments/46",
-    note: "The standard Core presentation remains distinct from the bounded fullInteractive application frame.",
+    note: "The standard Core presentation remains distinct from the bounded Interactive application frame.",
   },
   {
     title: "Publishing through The Bridge",
@@ -131,7 +131,7 @@ export const ghostDemos: Demo[] = [
     state: "Live",
     href: "https://ghost.demo.discussionbridge.dev/ghost-full-comments/",
     discussionHref: "https://bridge.demo.discussionbridge.dev/t/ghost-full-comments/48",
-    note: "Full retains Discourse Core's naturally measured presentation rather than the fullInteractive viewport.",
+    note: "Full retains Discourse Core's naturally measured presentation rather than the Interactive viewport.",
   },
   {
     title: "Publishing through The Bridge",
@@ -140,7 +140,7 @@ export const ghostDemos: Demo[] = [
     state: "Live",
     href: "https://ghost.demo.discussionbridge.dev/portable-rich-content-from-ghost/",
     discussionHref: "https://bridge.demo.discussionbridge.dev/t/portable-rich-content-from-ghost/27",
-    note: "Headings, media, Mermaid, math, authorship, retry identity, and fullInteractive discussion are live.",
+    note: "Headings, media, Mermaid, math, authorship, retry identity, and Interactive discussion are live.",
   },
   {
     title: "From The Bridge",

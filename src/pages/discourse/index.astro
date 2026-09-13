@@ -4,17 +4,17 @@ import { discourseDemos } from "../../data/demo-estate";
 import DemoLayout from "../../layouts/DemoLayout.astro";
 
 const profiles = [
-  { name: "Astro", fullInteractive: "https://astrostarlight.demo.discussionbridge.dev/comments/bridge-publisher/", simple: "https://astrostarlight.demo.discussionbridge.dev/comments/shared-simple/", full: "https://astrostarlight.demo.discussionbridge.dev/comments/shared-full/" },
-  { name: "WordPress", fullInteractive: "https://wordpress.demo.discussionbridge.dev/the-bridge-publishes-everywhere/", simple: "https://wordpress.demo.discussionbridge.dev/shared-simple-comments/", full: "https://wordpress.demo.discussionbridge.dev/shared-full-comments/" },
-  { name: "Ghost", fullInteractive: "https://ghost.demo.discussionbridge.dev/the-bridge-publishes-everywhere/", simple: "https://ghost.demo.discussionbridge.dev/shared-simple-comments/", full: "https://ghost.demo.discussionbridge.dev/shared-full-comments/" },
-  { name: "Statamic Flat", fullInteractive: "https://statamic-flat.demo.discussionbridge.dev/discussionbridge/the-bridge-publishes-everywhere", simple: "https://statamic-flat.demo.discussionbridge.dev/discussionbridge/shared-simple-comments", full: "https://statamic-flat.demo.discussionbridge.dev/discussionbridge/shared-full-comments" },
-  { name: "Statamic DB", fullInteractive: "https://statamic-db.demo.discussionbridge.dev/discussionbridge/the-bridge-publishes-everywhere", simple: "https://statamic-db.demo.discussionbridge.dev/discussionbridge/shared-simple-comments", full: "https://statamic-db.demo.discussionbridge.dev/discussionbridge/shared-full-comments" },
-  { name: "Statamic SSG", fullInteractive: "https://statamic-ssg.demo.discussionbridge.dev/discussionbridge/the-bridge-publishes-everywhere/", simple: "https://statamic-ssg.demo.discussionbridge.dev/discussionbridge/shared-simple-comments/", full: "https://statamic-ssg.demo.discussionbridge.dev/discussionbridge/shared-full-comments/" },
-  { name: "Hugo", fullInteractive: "https://hugo.demo.discussionbridge.dev/discussionbridge/the-bridge-publishes-everywhere/", simple: "https://hugo.demo.discussionbridge.dev/discussionbridge/shared-simple-comments/", full: "https://hugo.demo.discussionbridge.dev/discussionbridge/shared-full-comments/" },
+  { name: "Astro", interactive: "https://astrostarlight.demo.discussionbridge.dev/comments/bridge-publisher/", simple: "https://astrostarlight.demo.discussionbridge.dev/comments/shared-simple/", full: "https://astrostarlight.demo.discussionbridge.dev/comments/shared-full/" },
+  { name: "WordPress", interactive: "https://wordpress.demo.discussionbridge.dev/the-bridge-publishes-everywhere/", simple: "https://wordpress.demo.discussionbridge.dev/shared-simple-comments/", full: "https://wordpress.demo.discussionbridge.dev/shared-full-comments/" },
+  { name: "Ghost", interactive: "https://ghost.demo.discussionbridge.dev/the-bridge-publishes-everywhere/", simple: "https://ghost.demo.discussionbridge.dev/shared-simple-comments/", full: "https://ghost.demo.discussionbridge.dev/shared-full-comments/" },
+  { name: "Statamic Flat", interactive: "https://statamic-flat.demo.discussionbridge.dev/discussionbridge/the-bridge-publishes-everywhere", simple: "https://statamic-flat.demo.discussionbridge.dev/discussionbridge/shared-simple-comments", full: "https://statamic-flat.demo.discussionbridge.dev/discussionbridge/shared-full-comments" },
+  { name: "Statamic DB", interactive: "https://statamic-db.demo.discussionbridge.dev/discussionbridge/the-bridge-publishes-everywhere", simple: "https://statamic-db.demo.discussionbridge.dev/discussionbridge/shared-simple-comments", full: "https://statamic-db.demo.discussionbridge.dev/discussionbridge/shared-full-comments" },
+  { name: "Statamic SSG", interactive: "https://statamic-ssg.demo.discussionbridge.dev/discussionbridge/the-bridge-publishes-everywhere/", simple: "https://statamic-ssg.demo.discussionbridge.dev/discussionbridge/shared-simple-comments/", full: "https://statamic-ssg.demo.discussionbridge.dev/discussionbridge/shared-full-comments/" },
+  { name: "Hugo", interactive: "https://hugo.demo.discussionbridge.dev/discussionbridge/the-bridge-publishes-everywhere/", simple: "https://hugo.demo.discussionbridge.dev/discussionbridge/shared-simple-comments/", full: "https://hugo.demo.discussionbridge.dev/discussionbridge/shared-full-comments/" },
 ];
 
 const conversations = [
-  { key: "fullInteractive", label: "fullInteractive", topic: "https://bridge.demo.discussionbridge.dev/t/the-bridge-publishes-everywhere/53", summary: "One forum-owned publication and live discussion, materialized natively and presented with the complete Bridge experience." },
+  { key: "interactive", label: "Interactive", topic: "https://bridge.demo.discussionbridge.dev/t/the-bridge-publishes-everywhere/53", summary: "One forum-owned publication and live discussion, materialized natively and presented with the complete Bridge experience." },
   { key: "simple", label: "Simple", topic: "https://bridge.demo.discussionbridge.dev/t/one-discussion-seven-simple-presentations/54", summary: "One authoritative topic rendered as lightweight native comment cards on every platform." },
   { key: "full", label: "Full", topic: "https://bridge.demo.discussionbridge.dev/t/one-discussion-seven-full-presentations/56", summary: "One authoritative topic presented through the standard Discourse comments frame on every platform." },
 ] as const;
@@ -32,11 +32,11 @@ const mixedExamples = [
   {
     title: "One Discourse topic · three destinations · three modes",
     topic: "https://bridge.demo.discussionbridge.dev/t/one-discussion-seven-full-presentations/56",
-    summary: "The same live Discourse topic appears at the same time as Simple on WordPress, Full on Ghost, and fullInteractive on Statamic DB.",
+    summary: "The same live Discourse topic appears at the same time as Simple on WordPress, Full on Ghost, and Interactive on Statamic DB.",
     destinations: [
       { name: "WordPress · Simple", href: "https://wordpress.demo.discussionbridge.dev/mixed-mode-simple-comments/" },
       { name: "Ghost · Full", href: "https://ghost.demo.discussionbridge.dev/shared-full-comments/" },
-      { name: "Statamic DB · fullInteractive", href: "https://statamic-db.demo.discussionbridge.dev/discussionbridge/mixed-mode-fullinteractive" },
+      { name: "Statamic DB · Interactive", href: "https://statamic-db.demo.discussionbridge.dev/discussionbridge/mixed-mode-fullinteractive" },
     ],
   },
 ];
