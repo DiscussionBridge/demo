@@ -11,6 +11,18 @@ import DemoLayout from "../layouts/DemoLayout.astro";
     <p>DiscussionBridge is a family of focused tools. Explore The Bridge—our Discourse-powered flagship—alongside the inaugural DiscussionBridge for Astro + Starlight and every live platform profile.</p>
   </section>
 
+  <figure class="demo-identity">
+    <a href="/og.png" aria-label="Open the full-resolution DiscussionBridge Demos image">
+      <img
+        src="/og.png"
+        width="1200"
+        height="630"
+        alt="DiscussionBridge Demos — publishing platforms connected through a shared bridge to community discussion."
+      />
+    </a>
+    <figcaption><a href="/og.png">Open the full-resolution DiscussionBridge Demos image</a></figcaption>
+  </figure>
+
   <section class="flagship-panel" aria-labelledby="flagship-title">
     <div>
       <p class="kicker">Flagship experience</p>
@@ -89,6 +101,12 @@ import DemoLayout from "../layouts/DemoLayout.astro";
 </DemoLayout>
 
 <style>
+  .demo-identity { margin: 0 0 24px; }
+  .demo-identity > a { display: block; overflow: hidden; border: 1px solid rgb(16 45 50 / 18%); border-radius: 28px; background: #082f35; box-shadow: 0 26px 70px rgb(16 45 50 / 16%); }
+  .demo-identity > a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+  .demo-identity img { display: block; width: 100%; height: auto; }
+  .demo-identity figcaption { margin-top: 10px; color: var(--muted); font-size: 0.82rem; text-align: right; }
+  .demo-identity figcaption a { color: var(--accent-strong); font-weight: 750; text-underline-offset: 0.2em; }
   .flagship-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 36px; align-items: end; padding: clamp(26px, 5vw, 54px); border-radius: 28px; background: #102d32; color: #fff; box-shadow: 0 26px 70px rgb(16 45 50 / 18%); }
   .flagship-panel h2, .flagship-panel p { margin: 0; }
   .flagship-panel h2 { max-width: 700px; font-family: var(--display-font); font-size: clamp(2rem, 5vw, 4rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1; }
