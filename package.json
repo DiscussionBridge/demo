@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -11,10 +14,15 @@
     "deploy": "wrangler deploy --config wrangler.jsonc --strict"
   },
   "dependencies": {
-    "astro": "^7.2.4",
+    "astro": "^7.4.2",
     "shiki": "^3.23.0"
   },
   "devDependencies": {
-    "wrangler": "4.123.0"
+    "wrangler": "4.152.0"
+  },
+  "overrides": {
+    "miniflare": {
+      "undici": "7.30.1"
+    }
   }
 }
