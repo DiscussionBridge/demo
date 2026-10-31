@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "astro": "^7.4.2",
-    "shiki": "^3.23.0"
+    "shiki": "^3.23.0",
+    "@codeworkslabs/astro-analytics": "0.1.0"
   },
   "devDependencies": {
     "wrangler": "4.152.0"

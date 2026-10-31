@@ -46,13 +46,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://demo.discussionbridge.dev/og.png" />
     <meta name="twitter:image:alt" content="DiscussionBridge Demos — See the Bridge. Then cross it." />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9SYR7QENF"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K9SYR7QENF');
-    </script>
     <title>{title}</title>
   </head>
   <body>
