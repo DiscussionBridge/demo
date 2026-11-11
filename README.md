@@ -1,57 +1,24 @@
 # DiscussionBridge Demo Chooser
 
-Entity ID: `DB-SITE-003`
+The [public demo chooser](https://demo.discussionbridge.dev/) links to
+Discourse and the platform demonstration sites. Each demonstration has its
+own source and deployment. The [sandbox chooser](https://sandbox.discussionbridge.dev/)
+links to the environments used for installation and configuration testing.
 
-Classification: public product site
+The site organizes its navigation around:
 
-Lifecycle: live
+- [The Bridge](https://demo.discussionbridge.dev/discourse/) for Discourse publishing.
+- Astro, Astro with Starlight, and the stock Starlight control.
+- Ghost, Hugo, Statamic Flat/DB/SSG, and WordPress.
+- Static generation examples for Astro, Hugo, and Statamic.
 
-Owner/operator: WebSynergetics / Bridge Boss
-
-Authoritative TODO: product-level work is tracked from
-`C:\CodeProjects\Products\DiscussionBridge\TODO.md`
-
-Live service: `https://demo.discussionbridge.dev`
-
-Last reviewed: 2026-08-31
-
-This repository is the canonical source for the DiscussionBridge demo chooser
-and its platform-collection navigation. It does not own the independent demo
-implementations.
-
-The public hierarchy is:
-
-- `/` — master chooser with The Bridge as flagship and seven showcase entries
-  representing eight independently configured Alpha profiles (Statamic DB and
-  Flat share one chooser entry);
-- `/astro/` — inaugural Astro + Starlight product, Plain Astro reference, and
-  stock Starlight control;
-- `/ghost/` — stock Ghost and future themed edition;
-- `/hugo/` — live stock Hugo profile with all four discussion modes;
-- `/statamic/` — independent DB, Flat, and SSG profiles plus future themed
-  editions;
-- `/wordpress/` — stock WordPress demonstration collection;
-- `/ssg/` — static-generation profiles spanning Astro, Hugo, and Statamic;
-- `/discourse/` — The Bridge, the flagship live stock Discourse publishing
-  forum with controlled operation.
-
-Existing Astro destinations plus the stock WordPress, Ghost, Hugo, Statamic
-Flat, Statamic DB, Statamic SSG, and The Bridge demos are live. The SSG
-collection links the live Astro + Starlight, Hugo, and Statamic SSG profiles.
-Undeployed platform origins are shown as planned and are not linked as though
-they already exist. The agreed
-hands-on forum hostname is `bridge.demo.discussionbridge.dev`; its short public
-name is **The Bridge**.
-
-The chooser's canonical estate inventory is maintained in
-`src/data/demo-estate.ts`. Update that inventory before duplicating names or
-status copy inside page templates.
+The chooser reads its platform and status data from
+`src/data/demo-estate.ts`. For V4 Alpha component source tags, see the
+[DiscussionBridge organization](https://github.com/DiscussionBridge).
 
 ## Repository And Deployment
 
 - GitHub: `DiscussionBridge/demo`
-- Local root:
-  `C:\CodeProjects\Sites\DiscussionBridge\discussionbridge.dev\demo.discussionbridge.dev\site`
 - Cloudflare Worker: `demo-discussionbridge-dev`
 - Deployment authority: `wrangler.jsonc`
 
