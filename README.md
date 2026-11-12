@@ -1,34 +1,11 @@
-# DiscussionBridge Demo Chooser
+# DiscussionBridge Demos
 
-The [public demo chooser](https://demo.discussionbridge.dev/) links to
-Discourse and the platform demonstration sites. Each demonstration has its
-own source and deployment. The [sandbox chooser](https://sandbox.discussionbridge.dev/)
-links to the environments used for installation and configuration testing.
+See how a website and a Discourse forum can share a discussion. The
+[demo chooser](https://demo.discussionbridge.dev/) brings together examples on Astro, Starlight, Ghost,
+Hugo, Statamic, and WordPress.
 
-The site organizes its navigation around:
+Start with [The Bridge](https://demo.discussionbridge.dev/discourse/) to see the Discourse side. The
+[documentation](https://docs.discussionbridge.dev/) explains how to set up the same kind of connection.
 
-- [The Bridge](https://demo.discussionbridge.dev/discourse/) for Discourse publishing.
-- Astro, Astro with Starlight, and the stock Starlight control.
-- Ghost, Hugo, Statamic Flat/DB/SSG, and WordPress.
-- Static generation examples for Astro, Hugo, and Statamic.
-
-The chooser reads its platform and status data from
-`src/data/demo-estate.ts`. For V4 Alpha component source tags, see the
-[DiscussionBridge organization](https://github.com/DiscussionBridge).
-
-## Repository And Deployment
-
-- GitHub: `DiscussionBridge/demo`
-- Cloudflare Worker: `demo-discussionbridge-dev`
-- Deployment authority: `wrangler.jsonc`
-
-## Commands
-
-```powershell
-npm ci
-npm run build
-npm run deploy:dry-run
-```
-
-Production deployment requires explicit product authority; repository
-membership or a successful local build does not authorize publication.
+This repository contains the chooser. The platforms run their own sites.
+To preview the chooser locally, run `npm ci` and `npm run build`.
